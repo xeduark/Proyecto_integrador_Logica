@@ -58,7 +58,7 @@ public class Grupo6View extends VerticalLayout {
                 "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Ffoto%20johnny-fotor-20230928205637.png?alt=media&token=c50fc972-8526-4f39-a5c6-f338afef7052&_gl=1*1u0x7po*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MzQ0Mi42MC4wLjA.");
         est1.put("name", "Johnny Londoño");
         Map<String, String> est2 = new HashMap<>();
-        est2.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
+        est2.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FGranda%20Zea%20Jer%C3%B3nimo.png?alt=media&token=8abc8bd5-580e-4e69-b274-cafce57adf52&_gl=1*11ebyvb*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NjQzMjM2Mi4yLjEuMTY5NjQzNTQ0MC40OC4wLjA.");
         est2.put("name", "Jeronimo Granda");
 
         users.add(est1);
