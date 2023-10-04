@@ -54,18 +54,22 @@ public class Grupo8View extends VerticalLayout {
 
         // Integrantes
         Map<String, String> est1 = new HashMap<>();
-        est1.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est1.put("name", "Estudiante 1");
+        est1.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FDayana%20Castro%20Villa.png?alt=media&token=75d41057-65ff-4173-8481-39ee2cda1ef5&_gl=1*gn1vx0*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4NDUxMC4zOS4wLjA.");
+        est1.put("name", "Dayana Castro");
         Map<String, String> est2 = new HashMap<>();
-        est2.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est2.put("name", "Estudiante 1");
+        est2.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FFernando%20S%C3%A1nchez.png?alt=media&token=50b032c1-7dbd-411a-a5ce-69fdb3cabed1&_gl=1*vmkpyu*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4NDUyOC4yMS4wLjA.");
+        est2.put("name", "Fernando Sánchez");
         Map<String, String> est3 = new HashMap<>();
-        est3.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est3.put("name", "Estudiante 1");
+        est3.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fcamiloh-fotor.png?alt=media&token=1cded657-ea46-4d05-994a-98f5ff86a487&_gl=1*ribc1p*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4NDQ4OS42MC4wLjA.");
+        est3.put("name", "Juan Camilo Hernandez");
 
         users.add(est1);
         users.add(est2);
         users.add(est3);
+
         add(secciones.students(users));
 
         String titulo1;

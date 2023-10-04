@@ -54,18 +54,16 @@ public class Grupo6View extends VerticalLayout {
 
         // Integrantes
         Map<String, String> est1 = new HashMap<>();
-        est1.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est1.put("name", "Estudiante 1");
+        est1.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Ffoto%20johnny-fotor-20230928205637.png?alt=media&token=c50fc972-8526-4f39-a5c6-f338afef7052&_gl=1*1u0x7po*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MzQ0Mi42MC4wLjA.");
+        est1.put("name", "Johnny Londoño");
         Map<String, String> est2 = new HashMap<>();
         est2.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est2.put("name", "Estudiante 1");
-        Map<String, String> est3 = new HashMap<>();
-        est3.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est3.put("name", "Estudiante 1");
+        est2.put("name", "Jeronimo Granda");
 
         users.add(est1);
         users.add(est2);
-        users.add(est3);
+
         add(secciones.students(users));
 
         String titulo1;

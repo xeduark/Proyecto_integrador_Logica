@@ -54,14 +54,15 @@ public class Grupo4View extends VerticalLayout {
 
         // Integrantes
         Map<String, String> est1 = new HashMap<>();
-        est1.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est1.put("name", "Estudiante 1");
+        est1.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FDanny%20Edison%20Idarraga.png?alt=media&token=237be993-4af6-436a-9cf2-aecce5daf345&_gl=1*1y8ve47*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MjQ2OS40LjAuMA..");
+        est1.put("name", "Danny Idarraga");
         Map<String, String> est2 = new HashMap<>();
         est2.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est2.put("name", "Estudiante 1");
+        est2.put("name", "Javier Boyacá");
         Map<String, String> est3 = new HashMap<>();
         est3.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
-        est3.put("name", "Estudiante 1");
+        est3.put("name", "Alejandro Aguirre");
 
         users.add(est1);
         users.add(est2);
