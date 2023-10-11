@@ -75,11 +75,14 @@ public class Grupo2View extends VerticalLayout {
         String diagrama;
 
         // Algoritmo1
-        titulo1 = "Algoritmo 1";
-        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
-        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
+        titulo1 = "Algoritmo1";
+        titulo2 = "Simulador de ahorro";
+        descripcion = "Este programa es un simulador de ahorros que te permite estimar cuánto dinero tendrás acumulado en una cuenta después de un periodo de tiempo determinado, considerando unos aportes periódicos y una tasa de interés efectiva anual.\r\n"
+                + //
+                "Finalmente conocerás el saldo acumulado después del periodo de tiempo indicado.\r\n" + //
+                "";
+        gist = "<script src=\"https://gist.github.com/Rossember01/63564f1e77b00ea92602cdde17a5a616.js\"></script>";
+        replit = "https://replit.com/@rossember01/Simuladorahorro#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 

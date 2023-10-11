@@ -38,7 +38,7 @@ public class Grupo8View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZAV-Aniv4BYuyHctlK_Ec0iFykayMWgcuEG2zCmN8p87O8VUnGwWgvVG9NGvTZmJvxJQ&usqp=CAU)");
 
         H1 t1 = new H1("Grupo 8");
         H2 t2 = new H2("Algoritmos Deportes y Salud");
@@ -81,11 +81,11 @@ public class Grupo8View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
-        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        titulo2 = "Calculos mecanicos";
+        descripcion = "En este programa tenemos varias opciones que el cliente puede consultar las cuales son preguntas que relacionamos con el diario vivir de los propietarios de vehículos. Entre las opciones está calcular velocidad promedio a la cual viajaron en su vehículo con una distancia y un tiempo determinado ,en la opción de calcular autonomía de un vehículo es básicamente la distancia máxima que puede llegar a circular un vehículo sin necesidad de parar a repostar, es decir, hasta que tengamos que rellenar el combustible otra vez. y en la opción consumo de su motor por distancia recorrida es muy útil para llevar un control de consumo de su máquina y estar atento llegado el caso de que el consumo aumente.";
+        gist = "<script src=\"https://gist.github.com/camilohl94/fed15f439e35bb6ce14e779cddae63ff.js\"></script>";
+        replit = "https://replit.com/@Juan-CamiloC835/casoIntegrado1#Main.java";
+        diagrama = "";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }

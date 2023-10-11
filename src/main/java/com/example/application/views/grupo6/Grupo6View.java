@@ -38,7 +38,7 @@ public class Grupo6View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)");
 
         H1 t1 = new H1("Grupo 3");
         H2 t2 = new H2("Algoritmos Deportes y Salud");

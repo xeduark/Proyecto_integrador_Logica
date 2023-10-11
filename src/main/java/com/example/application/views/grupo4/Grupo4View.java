@@ -38,7 +38,8 @@ public class Grupo4View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/banner%20circuito-electronico.jpg?alt=media&token=b8f00321-b5c5-4d6e-9b63-32f083fc5758&_gl=1*9ed221*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Njk4NDMyMC4xOS4xLjE2OTY5ODQ1NjUuNjAuMC4w\r\n" + //
+                        ")");
 
         H1 t1 = new H1("Grupo 4");
         H2 t2 = new H2("Algoritmos Deportes y Salud");
@@ -78,10 +79,10 @@ public class Grupo4View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
+        titulo2 = "Juego de adivinanzas";
         descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
-        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
+        gist = "<script src=\"https://gist.github.com/dannyedison/bbde62865931f27ddf5e84be9bc1404b.js\"></script>";
+        replit = "https://replit.com/@dannyedison75/Codigo1#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
