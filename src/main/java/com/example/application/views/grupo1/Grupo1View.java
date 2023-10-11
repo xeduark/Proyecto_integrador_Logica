@@ -39,10 +39,10 @@ public class Grupo1View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://plus.unsplash.com/premium_photo-1661763720453-038215ddc44f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1801&q=80)");
 
         H1 t1 = new H1("Grupo 1");
-        H2 t2 = new H2("Algoritmos Deportes y Salud");
+        H2 t2 = new H2("Estadística");
         t1.getStyle().set("text-shadow", "#000 3px 0 15px");
         t2.getStyle().set("text-shadow", "#000 3px 0 15px");
         vl.add(t1);
