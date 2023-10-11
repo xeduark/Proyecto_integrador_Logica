@@ -58,10 +58,10 @@ public class Grupo4View extends VerticalLayout {
                 "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FDanny%20Edison%20Idarraga.png?alt=media&token=237be993-4af6-436a-9cf2-aecce5daf345&_gl=1*1y8ve47*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MjQ2OS40LjAuMA..");
         est1.put("name", "Danny Idarraga");
         Map<String, String> est2 = new HashMap<>();
-        est2.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
+        est2.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
         est2.put("name", "Javier Boyacá");
         Map<String, String> est3 = new HashMap<>();
-        est3.put("image", "https://cdn.iconscout.com/icon/free/png-512/free-avatar-369-456321.png?f=avif&w=256");
+        est3.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
         est3.put("name", "Alejandro Aguirre");
 
         users.add(est1);

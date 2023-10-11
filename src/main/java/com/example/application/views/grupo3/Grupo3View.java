@@ -15,6 +15,7 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.NumberField;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -38,7 +39,7 @@ public class Grupo3View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fdeportes3-fotor-20231011115722-fotor-2023101112019.jpg?alt=media&token=81983449-4a02-4e07-9b73-98e2c8f1e4b5&_gl=1*j2jxxj*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MzY0Mi41MC4wLjA.)");
 
         H1 t1 = new H1("Grupo 3");
         H2 t2 = new H2("Algoritmos Deportes y Salud");
@@ -87,13 +88,27 @@ public class Grupo3View extends VerticalLayout {
         diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
+        // Algoritmo2
+        titulo1 = "Algoritmo 2";
+        titulo2 = "Simulador de partidos";
+        descripcion = "Simulación de Resultados de partidos: El usuario ingresa dos equipos, los cuales competirán por varios partidos hasta que alguno de los 2 complete 15 puntos o jueguen 8 partidos,\r\n"
+                + //
+                "si el partido queda (0 - 0), sería partido no válido y deberá repetir el partido\r\n" + //
+                "";
+        gist = "<script src=\"https://gist.github.com/Alexpian7/406b61e9ecce6f3f559dd4bb8ba5aaf1.js\"></script>";
+        replit = "https://replit.com/@aaalzate5/Proyecto1#Main.java";
+        diagrama = "";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+
     }
 
     public HorizontalLayout algoritmo1() {
 
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
+        vl1.add(new Image(
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fimc1-fotor-202310111296.jpg?alt=media&token=0e856adc-2359-4a69-9ab4-82a549ab56c4&_gl=1*1l79lkf*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0NDE3Ni43LjAuMA..",
+                ""));
 
         VerticalLayout vl2 = new VerticalLayout();
         vl2.setAlignItems(Alignment.CENTER);
@@ -133,6 +148,72 @@ public class Grupo3View extends VerticalLayout {
         vl2.add(altura);
         vl2.add(calcular);
         vl2.add(salida);
+        hl.add(vl1);
+        hl.add(vl2);
+        return hl;
+    }
+
+    public HorizontalLayout algoritmo2() {
+
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image(
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2F818eab1d9e1963313a2e2710ae84daf9-fotor-20231010195945-fotor-20231010205323.jpg?alt=media&token=e5b2f6f9-0e16-4544-90fc-daa1eab6f1d6&_gl=1*1pmg29g*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0NDg4MC42MC4wLjA.",
+                ""));
+
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
+
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.setAlignItems(Alignment.CENTER);
+        hl.setWidthFull();
+
+        TextField Equipo1 = new TextField("Equipo 1");
+        TextField Equipo2 = new TextField("Equipo 2");
+        Button simular = new Button("Simulación");
+        H3 m1 = new H3("Mensaje1");
+
+        simular.addClickListener(event -> {
+            int puntajeUno = 0, puntajeDos = 0;
+            int partido = 0;
+
+            while (partido <= 8) {
+                int goles1 = (int) (Math.random() * 5);
+                int goles2 = (int) (Math.random() * 5);
+                if (goles1 > goles2) {
+                    puntajeUno += 3;
+                } else if (goles2 > goles1) {
+                    puntajeDos += 3;
+                } else if (goles1 > 0 && goles1 == goles2) {
+                    puntajeUno++;
+                    puntajeDos++;
+                } else {
+                    System.out.print("Partido no valido");
+                    continue;
+                }
+                partido++;
+                System.out.print("Resultado del partido " + partido + "\n");
+                System.out
+                        .print(Equipo1.getValue() + " <" + goles1 + " - " + goles2 + "> " + Equipo2.getValue() + "\n");
+                if (puntajeUno >= 15 || puntajeDos >= 15) {
+                    break;
+                }
+            }
+            partido--;
+            String m2 = ("Se jugaron " + partido + " partidos "+" "+"El " + Equipo1.getValue() + " consiguió " + puntajeUno + " puntos "+" "+ "El " + Equipo2.getValue() + " consiguió " + puntajeDos + " puntos");
+           
+            if (puntajeUno > puntajeDos) {
+                System.out.print(" Felicitaciones, su equipo ganó");
+            } else {
+                System.out.print(" Lo sentimos, su equipo no ganó");
+            }
+
+        });
+        vl2.add(new H3("Ingresa el nombre de el equipo que te gusta y un rival"));
+        vl2.add(Equipo1);
+        vl2.add(Equipo2);
+        vl2.add(simular);
+        vl2.add(m1);
         hl.add(vl1);
         hl.add(vl2);
         return hl;
