@@ -171,7 +171,7 @@ public class Grupo3View extends VerticalLayout {
         TextField Equipo1 = new TextField("Equipo 1");
         TextField Equipo2 = new TextField("Equipo 2");
         Button simular = new Button("Simulación");
-        H3 m1 = new H3("Mensaje1");
+        H3 m1 = new H3("");
 
         simular.addClickListener(event -> {
             int puntajeUno = 0, puntajeDos = 0;
@@ -200,13 +200,16 @@ public class Grupo3View extends VerticalLayout {
                 }
             }
             partido--;
-            String m2 = ("Se jugaron " + partido + " partidos "+" "+"El " + Equipo1.getValue() + " consiguió " + puntajeUno + " puntos "+" "+ "El " + Equipo2.getValue() + " consiguió " + puntajeDos + " puntos");
+            String m2 = ("Se jugaron " + partido + " partidos :"+" "+"El " + Equipo1.getValue() + " consiguió " + puntajeUno + " puntos, "+" "+ "El " + Equipo2.getValue() + " consiguió " + puntajeDos + " puntos");
            
             if (puntajeUno > puntajeDos) {
-                System.out.print(" Felicitaciones, su equipo ganó");
+                m2+= " Felicitaciones, su equipo ganó!!";
+                // System.out.print(" Felicitaciones, su equipo ganó");
             } else {
-                System.out.print(" Lo sentimos, su equipo no ganó");
+                m2+= " Lo sentimos, su equipo no ganó...";
+                // System.out.print(" Lo sentimos, su equipo no ganó");
             }
+            m1.setText(m2);
 
         });
         vl2.add(new H3("Ingresa el nombre de el equipo que te gusta y un rival"));
