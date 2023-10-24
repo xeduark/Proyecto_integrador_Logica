@@ -38,10 +38,11 @@ public class Grupo7View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://firebasestorage.googleapis.com/v0/b/proyecto1-11e37.appspot.com/o/Universo-e1537822135973.jpg?alt=media&token=202ed83f-7e04-47d2-af88-7b216c590029&_gl=1*7vgk9w*_ga*MTAyMTA0ODY2My4xNjkzMzU4ODc0*_ga_CW55HF8NVT*MTY5Njk4MjcyMS4xNS4xLjE2OTY5ODMyMTcuNTAuMC4w)");
 
         H1 t1 = new H1("Grupo 7");
-        H2 t2 = new H2("Algoritmos Deportes y Salud");
+        H2 t2 = new H2("Astronomía\r\n" + //
+                "");
         t1.getStyle().set("text-shadow", "#000 3px 0 15px");
         t2.getStyle().set("text-shadow", "#000 3px 0 15px");
         vl.add(t1);
@@ -76,11 +77,18 @@ public class Grupo7View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
+        titulo2 = "Consulta la distancia de los planetas del sistema solar a distancia en kilómetros desde la tierra";
+        descripcion = "En este algoritmo podremos obtener la distancia entre la tierra y los planetas del sistema solar.\r\n" + //
+                "\r\n" + //
+                "\r\n" + //
+                "La astronomía es una ciencia que estudia el universo y todos sus componentes. Estudia también los fenómenos que afectan a los cuerpos celestes, sus movimientos y comportamientos esperables.\r\n" + //
+                "\r\n" + //
+                "Entre los cuerpos celestes se encuentran los planetas, estrellas, satélites, cometas, meteoroides, materia interestelar y materia oscura\r\n" + //
+                "\r\n" + //
+                "";
         gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        replit = "";
+        diagrama = "";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }

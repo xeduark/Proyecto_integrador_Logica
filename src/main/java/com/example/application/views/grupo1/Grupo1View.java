@@ -63,7 +63,8 @@ public class Grupo1View extends VerticalLayout {
                 "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FSara%20Lopera%20Perez.png?alt=media&token=2d24bf89-d4b7-4f00-9759-1287bb942e52&_gl=1*1eun1ou*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MDk0OC42MC4wLjA.");
         est2.put("name", "Sara Lopera");
         Map<String, String> est3 = new HashMap<>();
-        est3.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FZully%20Vega.png?alt=media&token=fd39f10f-fb27-474f-ac06-88860b4424ae&_gl=1*l2zrel*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MTE2MC42MC4wLjA.");
+        est3.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FZully%20Vega.png?alt=media&token=fd39f10f-fb27-474f-ac06-88860b4424ae&_gl=1*l2zrel*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MTE2MC42MC4wLjA.");
         est3.put("name", "Zully Vega");
 
         users.add(est1);
@@ -80,10 +81,14 @@ public class Grupo1View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
+        titulo2 = "Calculadora de Área y Volumen de la Esfera";
+        descripcion = "La esfera es un cuerpo geométrico formado generado por una semicircunferencia que gira alrededor de un determinado eje.\r\n"
+                + //
+                "Utilice esta calculadora para averiguar el volumen y el área de una esfera utilizando el radio.\r\n" + //
+                "";
+
         gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
+        replit = "https://replit.com/@zvegaon/Esfera#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 

@@ -42,7 +42,7 @@ public class Grupo3View extends VerticalLayout {
                 "url(https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fdeportes3-fotor-20231011115722-fotor-2023101112019.jpg?alt=media&token=81983449-4a02-4e07-9b73-98e2c8f1e4b5&_gl=1*j2jxxj*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MzY0Mi41MC4wLjA.)");
 
         H1 t1 = new H1("Grupo 3");
-        H2 t2 = new H2("Algoritmos Deportes y Salud");
+        H2 t2 = new H2("Deportes y Salud");
         t1.getStyle().set("text-shadow", "#000 3px 0 15px");
         t2.getStyle().set("text-shadow", "#000 3px 0 15px");
         vl.add(t1);
@@ -82,10 +82,12 @@ public class Grupo3View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
-        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        descripcion = " El Índice de Masa Corporal (IMC) es la cifra que te ayuda a averiguar si tu peso corporal es el adecuado o no.\r\n" + //
+                "Esta calculadora es una herramienta útil para averiguar rápidamente si tu peso corporal está situado, por ejemplo, en la zona de sobrepeso, pero hay que tener en cuenta que este índice no contempla las diferentes densidades de la masa muscular, grasa corporal o la masa ósea. En el caso de los deportistas que tienen una masa muscular muy desarrollada, el resultado de este cálculo podría indicar erróneamente que  padece sobrepeso. También hay que tener cuidado en los resultados obtenidos en personas embarazadas o en edad avanzada, ya que se tratan de casos especiales y en todo caso habría que tener en cuenta otros parámetros para determinar su IMC:\r\n" + //
+                " ";
+        gist = " <script src=\"https://gist.github.com/JuanGarciaRodas/8a2a9370c109e6607856398500e08398.js\"></script> ";
+        replit = "https://replit.com/@Juan-Carlos1328/IMC";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/algoritmos%2Fcode2flow_5TWySH.png?alt=media&token=27493753-419b-4519-8316-41f9fbeda9d5&_gl=1*1lrll67*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODE2MzI0OC42LjEuMTY5ODE2MzM1My4xNS4wLjA.";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
         // Algoritmo2
@@ -97,7 +99,17 @@ public class Grupo3View extends VerticalLayout {
                 "";
         gist = "<script src=\"https://gist.github.com/Alexpian7/406b61e9ecce6f3f559dd4bb8ba5aaf1.js\"></script>";
         replit = "https://replit.com/@aaalzate5/Proyecto1#Main.java";
-        diagrama = "";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/algoritmos%2Fcode2flow_5TWySH%20(1).png?alt=media&token=863d3f67-0d1f-4ce2-8fd5-b5bbd168578f&_gl=1*12q2isi*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODE2MzI0OC42LjEuMTY5ODE2MzgyMS40Ni4wLjA.";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+
+        // Algoritmo3
+        titulo1 = "Algoritmo 3";
+        titulo2 = "Calculador de Velocidad";
+        descripcion = "Es un ejercicio en el que se calcula la velocidad de un deportista en Km/h dado su tiempo en carrera y la distancia recorrida" + //
+                "";
+        gist = "<script src=\"https://gist.github.com/xeduark/3b1d5487b91f1fd5a6b0fc40eac44585.js\"></script>";
+        replit = "https://replit.com/@EdwardMunoz/eje3#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/algoritmos%2Fcode2flow_2rHKvV.png?alt=media&token=d681fadd-0948-44af-8acf-e736314d739f&_gl=1*1t3nn3j*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODE3MTMwMS43LjEuMTY5ODE3MTMxNi40NS4wLjA.";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
 
     }

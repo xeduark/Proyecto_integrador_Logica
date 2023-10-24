@@ -38,7 +38,8 @@ public class Grupo4View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/banner%20circuito-electronico.jpg?alt=media&token=b8f00321-b5c5-4d6e-9b63-32f083fc5758&_gl=1*9ed221*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Njk4NDMyMC4xOS4xLjE2OTY5ODQ1NjUuNjAuMC4w\r\n" + //
+                "url(https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/banner%20circuito-electronico.jpg?alt=media&token=b8f00321-b5c5-4d6e-9b63-32f083fc5758&_gl=1*9ed221*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Njk4NDMyMC4xOS4xLjE2OTY5ODQ1NjUuNjAuMC4w\r\n"
+                        + //
                         ")");
 
         H1 t1 = new H1("Grupo 4");
@@ -59,10 +60,12 @@ public class Grupo4View extends VerticalLayout {
                 "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FDanny%20Edison%20Idarraga.png?alt=media&token=237be993-4af6-436a-9cf2-aecce5daf345&_gl=1*1y8ve47*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MjQ2OS40LjAuMA..");
         est1.put("name", "Danny Idarraga");
         Map<String, String> est2 = new HashMap<>();
-        est2.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
+        est2.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
         est2.put("name", "Javier Boyacá");
         Map<String, String> est3 = new HashMap<>();
-        est3.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
+        est3.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
         est3.put("name", "Alejandro Aguirre");
 
         users.add(est1);
@@ -80,10 +83,14 @@ public class Grupo4View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Juego de adivinanzas";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
-        gist = "<script src=\"https://gist.github.com/dannyedison/bbde62865931f27ddf5e84be9bc1404b.js\"></script>";
+        descripcion = " El juego consta de 2 actividades: La primera, consiste en adivinar el color correspondiente al número generado por el sistema, y la segunda consiste en adivinar el valor correspondiente al color generado por el sistema.\r\n"
+                + //
+                "";
+        gist = "gist  <script src=\"https://gist.github.com/dannyedison/bbde62865931f27ddf5e84be9bc1404b.js\"></script>\r\n"
+                + //
+                "";
         replit = "https://replit.com/@dannyedison75/Codigo1#Main.java";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        diagrama = "";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }

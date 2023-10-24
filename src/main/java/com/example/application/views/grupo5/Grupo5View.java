@@ -59,14 +59,11 @@ public class Grupo5View extends VerticalLayout {
         Map<String, String> est2 = new HashMap<>();
         est2.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Flady%20andrea%202023-09-27%20at%2010.11.51%20PM-fotor-20231003203252.png?alt=media&token=8db4e638-a281-4b5e-93b1-c40ebc302ff6&_gl=1*1r5rqwt*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NjQzMjM2Mi4yLjEuMTY5NjQzNTI2Ni42MC4wLjA.");
         est2.put("name", "Andrea vargas");
-        Map<String, String> est3 = new HashMap<>();
-        est3.put("image",
-                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fjulio-fotor-.png?alt=media&token=4012d63b-1f69-4e9b-a8f0-99cb1534cdb1&_gl=1*h44kpl*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MzMwMS41MS4wLjA.");
-        est3.put("name", "julio Torres");
+        
 
         users.add(est1);
         users.add(est2);
-        users.add(est3);
+        
         add(secciones.students(users));
 
         String titulo1;
