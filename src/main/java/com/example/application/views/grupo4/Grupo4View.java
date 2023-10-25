@@ -15,6 +15,7 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.NumberField;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -43,7 +44,7 @@ public class Grupo4View extends VerticalLayout {
                         ")");
 
         H1 t1 = new H1("Grupo 4");
-        H2 t2 = new H2("Algoritmos Deportes y Salud");
+        H2 t2 = new H2("Algoritmos electrónica y electricidad");
         t1.getStyle().set("text-shadow", "#000 3px 0 15px");
         t2.getStyle().set("text-shadow", "#000 3px 0 15px");
         vl.add(t1);
@@ -82,66 +83,140 @@ public class Grupo4View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "Juego de adivinanzas";
-        descripcion = " El juego consta de 2 actividades: La primera, consiste en adivinar el color correspondiente al número generado por el sistema, y la segunda consiste en adivinar el valor correspondiente al color generado por el sistema.\r\n"
-                + //
-                "";
+        titulo2 = "JUEGO DE ADIVINANZA DE CODIGO DE COLORES DE LAS RESISTENCIAS";
+        descripcion = "Programa para practicar el uso del código de colores en electrónica";
         gist = "gist  <script src=\"https://gist.github.com/dannyedison/bbde62865931f27ddf5e84be9bc1404b.js\"></script>\r\n"
                 + //
                 "";
         replit = "https://replit.com/@dannyedison75/Codigo1#Main.java";
-        diagrama = "";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/MainCodigo1.png?alt=media&token=6f23b8ed-74e5-44ee-9a7e-c13330cd97f5&_gl=1*dk1x5q*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Nzk4MDYwMC4yNC4xLjE2OTc5ODIzMzYuNTIuMC4w";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }
 
+    // Variables vl2
+    int aleatorio;
+    H2 h2ResultadoJuego;
+    String colorObtenido;
+    String mayuscula;
+    String resultadoJuego;
+    String[] colorAlmacenado = { "NEGRO", "CAFE", "ROJO", "NARANJA", "AMARILLO", "VERDE", "AZUL", "VIOLETA",
+            "GRIS", "BLANCO" };
+
+    // Variables vl3
+    H1 h1ColorAleatorio;
+    H3 h2ResultadoJuego2;
+    int aleatorio2;
+    double valor;
+    String colorAleatorio;
+
     public HorizontalLayout algoritmo1() {
-
-        VerticalLayout vl1 = new VerticalLayout();
-        vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
-
-        VerticalLayout vl2 = new VerticalLayout();
-        vl2.setAlignItems(Alignment.CENTER);
 
         HorizontalLayout hl = new HorizontalLayout();
         hl.setAlignItems(Alignment.CENTER);
         hl.setWidthFull();
 
-        NumberField peso = new NumberField("Peso (kg)");
-        NumberField altura = new NumberField("Altura (m)");
-        Button calcular = new Button("Calcular IMC");
-        H3 salida = new H3();
+        // Inicio vl1
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image(
+                "https://futuroelectrico.com/wp-content/uploads/2020/02/resistencia-electrica-2.jpg",
+                ""));
 
-        calcular.addClickListener(event -> {
-            double valorPeso = peso.getValue();
-            double valorAltura = altura.getValue();
-            double imc = valorPeso / Math.pow(valorAltura, 2);
-            String info = "";
-            if (imc < 18.5) {
-                info = "Bajo peso";
-            } else if (imc >= 18.5 && imc < 24.9) {
-                info = "Peso saludable";
-            } else if (imc >= 25.0 && imc < 29.9) {
-                info = "Sobrepeso";
-            } else if (imc >= 30.0 && imc < 34.9) {
-                info = "Obesidad Clase 1";
-            } else if (imc >= 35.0 && imc < 39.9) {
-                info = "Obesidad Clase 2";
-            } else {
-                info = "Obesidad Clase 3";
-            }
-            String numeroFormateado = String.format("%.2f", imc);
-            salida.setText(String.valueOf(numeroFormateado + ", " + info));
+        vl1.add("RECUERDA QUE LOS COLORES SON!:  ");
+        vl1.add(" VIOLETA, AMARILLO, CAFE, BLANCO, ROJO, GRIS, NARANJA, VERDE, NEGRO, AZUL. -  ");
+        vl1.add(" Y LOS VALORES VAN DE 0 A 9");
+
+        // Fin vl1
+
+        // Inicio vl2
+
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
+
+        vl2.add("Presione el Botón 'Conocer Número' para saber que color debes adivinar:");
+        // cajas de resultados
+        H1 h1RespAleatorio = new H1("0");
+        h2ResultadoJuego = new H2("0");
+
+        // campo Ingresar texto del color
+        TextField tfColorIngresado = new TextField("Ingrese Color:");
+
+        // Boton activa Aleatorio
+        Button btnConocerNumero = new Button("Conocer Número");
+        btnConocerNumero.addClickListener(event -> {
+            aleatorio = (int) (Math.random() * 10 + 0);
+            h1RespAleatorio.setText(String.valueOf(aleatorio));
+            h2ResultadoJuego.setText("0");
         });
-        vl2.add(new H3("Calculadora Índice de Masa Corporal (IMC)"));
-        vl2.add(peso);
-        vl2.add(altura);
-        vl2.add(calcular);
-        vl2.add(salida);
+
+        // Boton Jugar
+        Button jugar = new Button("Jugar");
+        jugar.addClickListener(event -> {
+            mayuscula = tfColorIngresado.getValue(); // captura color
+            colorObtenido = mayuscula.toUpperCase(); // cambia a mayusculas
+
+            if (colorAlmacenado[aleatorio].equals(colorObtenido)) {
+
+                h2ResultadoJuego.setText("Es correcto. ¡FELCITACIONES! :)"); // muestra resultado
+            } else {
+                h2ResultadoJuego.setText("Es incorrecto. ¡INTENTA DE NUEVO! :("); // muestra resultado
+            }
+        });
+        // Fin vl2
+
+        // Inicio vl3
+        VerticalLayout vl3 = new VerticalLayout();
+        vl3.setAlignItems(Alignment.CENTER);
+
+        vl3.add("Presione el Botón 'Conocer Color' para saber que número debes adivinar:");
+
+        // cajas de resultados
+        h1ColorAleatorio = new H1("0");
+        h2ResultadoJuego2 = new H3("0");
+
+        // campo Ingresar valor del color
+        NumberField nfValorIngresado = new NumberField("Ingrese Valor:");
+
+        // Boton activa Aleatorio
+        Button btnConocerColor = new Button("Conocer Color");
+        btnConocerColor.addClickListener(event -> {
+            aleatorio2 = (int) (Math.random() * 10 + 0);
+            h1ColorAleatorio.setText(colorAlmacenado[aleatorio2]);
+            h2ResultadoJuego2.setText("0");
+        });
+
+        // Boton Jugar
+        Button jugar2 = new Button("Jugar");
+        jugar2.addClickListener(event -> {
+            valor = nfValorIngresado.getValue(); // captura valor
+
+            if (valor == aleatorio2) {
+
+                h2ResultadoJuego2.setText("Es correcto. ¡FELICITACIONES! :)"); // muestra resultado
+            } else {
+                h2ResultadoJuego2.setText("Es incorrecto. ¡INTENTA DE NUEVO! :("); // muestra resultado
+            }
+        });
+
+        // Fin vl3
+
+        vl2.add(btnConocerNumero); // boton conocer numero aleatorio
+        vl2.add(h1RespAleatorio); // caja donde muestra numero aleatorio
+        vl2.add(tfColorIngresado); // caja para ingresar el color
+        vl2.add(jugar); // boton jugar
+        vl2.add(h2ResultadoJuego); // caja de resultado del juego
+
+        vl3.add(btnConocerColor); // boton conocer color aleatorio
+        vl3.add(h1ColorAleatorio); // caja donde se muestra color
+        vl3.add(nfValorIngresado); // caja para ingresar valor
+        vl3.add(jugar2); // boton jugar
+        vl3.add(h2ResultadoJuego2); // caja de resultado del juego
+
         hl.add(vl1);
         hl.add(vl2);
+        hl.add(vl3);
+
         return hl;
     }
-
 }
