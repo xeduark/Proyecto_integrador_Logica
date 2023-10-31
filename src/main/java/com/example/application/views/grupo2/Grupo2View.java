@@ -86,6 +86,26 @@ public class Grupo2View extends VerticalLayout {
         diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
+        // Algoritmo2
+        titulo1 = "Algoritmo2";
+        titulo2 = " Calculadora CDT";
+        descripcion = "Este programa es una calculadora de certificados de depósito a término (CDT), la cual recopila información del usuario, monto a invertir, tasa de interés anual, y el plazo en meses, para luego calcular y mostrar el valor futuro.";
+        gist = "<script src=\"https://gist.github.com/Rossember01/61a6f6399da83e94c9b1f5b3da7ddd3a.js\"></script>\r\n" + //
+                "";
+        replit = "https://replit.com/@rossember01/CalculadoraCDT-1#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+
+        // Algoritmo3
+        titulo1 = "Algoritmo3";
+        titulo2 = "Simulador credito";
+        descripcion = "  Este simulador de crédito te brinda una estimación de la cuota mensual a pagar y el costo total de dicho crédito, puedes ajustar la consulta y explorar las diferentes alternativas para encontrar la mejor opción que se adapte a tus necesidades y capacidad de pago.";
+        gist = " <script src=\"https://gist.github.com/Rossember01/2bbcbf7ce451b108c6b1da44d5d8a07b.js\"></script>\r\n" + //
+                "";
+        replit = "https://replit.com/@rossember01/Simuladorcredito#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+
     }
 
     public HorizontalLayout algoritmo1() {

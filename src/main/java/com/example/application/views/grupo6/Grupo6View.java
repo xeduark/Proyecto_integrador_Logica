@@ -75,20 +75,21 @@ public class Grupo6View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
-        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        titulo2 = "Calcular el movimiento rectilíneo uniforme";
+        descripcion = "MRU) es un tipo de movimiento en el cual un objeto se mueve en línea recta y a velocidad constante, es decir, su velocidad no cambia en el tiempo. En este tipo de movimiento, la trayectoria del objeto es una línea recta, por lo que su aceleración es cero.";
+        gist = "<script src=\"https://gist.github.com/johnnycesde/a07a3d208519ff9ad5211c3d91029d3a.js\"></script>";
+        replit = "https://replit.com/@johnnylondono/mcu";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-alumno.appspot.com/o/diagramaf%20mru.svg?alt=media&token=5bc6511b-1361-46f3-a233-834631028b82";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }
-
+    
+    double tiempo;
     public HorizontalLayout algoritmo1() {
-
+        
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
+        vl1.add(new Image("https://pensaryaprender.files.wordpress.com/2011/10/fc3b3rmula-mru.gif", ""));
 
         VerticalLayout vl2 = new VerticalLayout();
         vl2.setAlignItems(Alignment.CENTER);
@@ -97,37 +98,22 @@ public class Grupo6View extends VerticalLayout {
         hl.setAlignItems(Alignment.CENTER);
         hl.setWidthFull();
 
-        NumberField peso = new NumberField("Peso (kg)");
-        NumberField altura = new NumberField("Altura (m)");
-        Button calcular = new Button("Calcular IMC");
-        H3 salida = new H3();
+        NumberField distancia = new NumberField("distancia (m/s)");
+        NumberField velocidad = new NumberField("velocidad (s)");
+        Button calcular = new Button("Calcular ");
+        H3 result = new H3("0");
 
         calcular.addClickListener(event -> {
-            double valorPeso = peso.getValue();
-            double valorAltura = altura.getValue();
-            double imc = valorPeso / Math.pow(valorAltura, 2);
-            String info = "";
-            if (imc < 18.5) {
-                info = "Bajo peso";
-            } else if (imc >= 18.5 && imc < 24.9) {
-                info = "Peso saludable";
-            } else if (imc >= 25.0 && imc < 29.9) {
-                info = "Sobrepeso";
-            } else if (imc >= 30.0 && imc < 34.9) {
-                info = "Obesidad Clase 1";
-            } else if (imc >= 35.0 && imc < 39.9) {
-                info = "Obesidad Clase 2";
-            } else {
-                info = "Obesidad Clase 3";
-            }
-            String numeroFormateado = String.format("%.2f", imc);
-            salida.setText(String.valueOf(numeroFormateado + ", " + info));
+            tiempo = distancia.getValue() / velocidad.getValue();
+            result.setText(String.valueOf(tiempo));
         });
-        vl2.add(new H3("Calculadora Índice de Masa Corporal (IMC)"));
-        vl2.add(peso);
-        vl2.add(altura);
+
+        vl2.add(new H3("Calcular MRU"));
+        vl2.add(distancia);
+        vl2.add(velocidad);
         vl2.add(calcular);
-        vl2.add(salida);
+
+        vl2.add(result);
         hl.add(vl1);
         hl.add(vl2);
         return hl;

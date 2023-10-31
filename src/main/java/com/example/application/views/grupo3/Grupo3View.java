@@ -110,7 +110,7 @@ public class Grupo3View extends VerticalLayout {
         gist = "<script src=\"https://gist.github.com/xeduark/3b1d5487b91f1fd5a6b0fc40eac44585.js\"></script>";
         replit = "https://replit.com/@EdwardMunoz/eje3#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/algoritmos%2Fcode2flow_2rHKvV.png?alt=media&token=d681fadd-0948-44af-8acf-e736314d739f&_gl=1*1t3nn3j*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODE3MTMwMS43LjEuMTY5ODE3MTMxNi40NS4wLjA.";
-        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo3(), gist, replit, diagrama));
 
     }
 
@@ -232,6 +232,47 @@ public class Grupo3View extends VerticalLayout {
         hl.add(vl1);
         hl.add(vl2);
         return hl;
+    }
+    double dis, min, seg, cen, tse, vms, vkh;
+    public HorizontalLayout algoritmo3() {
+
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image(
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fcorredor-pista-atletismo-768x512-fotor-20231031102144.jpg?alt=media&token=ebf53579-464c-4e40-a598-e9ca2278b63a&_gl=1*pkb7i8*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODc2NDQ3Ni44LjEuMTY5ODc2NTcyOC40Ni4wLjA.",
+                ""));
+
+                VerticalLayout vl2 = new VerticalLayout();
+                vl2.setAlignItems(Alignment.CENTER);
+        
+                HorizontalLayout hl = new HorizontalLayout();
+                hl.setAlignItems(Alignment.CENTER);
+                hl.setWidthFull();
+        
+                NumberField dis = new NumberField("distancia (en metros):");
+                NumberField min = new NumberField("distancia recorrida en minutos:");
+                NumberField seg = new NumberField("distancia recorrida en segundos:");
+                NumberField cen = new NumberField("distancia recorrida en centésimas:");
+                Button calcular = new Button("Calcular");
+                H3 result = new H3("0");
+        
+                calcular.addClickListener(event -> {
+
+                    vkh=((dis.getValue()/((min.getValue()*60)+seg.getValue()+(cen.getValue()/100)))*3600)/1000;
+                    result.setText(String.valueOf("La velocidad es de: "+vkh+" km/h"));
+                });
+        
+                vl2.add(new H3("Eres rapido? vamos a averiguarlo..."));
+                vl2.add(dis);
+                vl2.add(min);
+                vl2.add(seg);
+                vl2.add(cen);
+                vl2.add(calcular);
+        
+                vl2.add(result);
+                hl.add(vl1);
+                hl.add(vl2);
+                return hl;
     }
 
 }
