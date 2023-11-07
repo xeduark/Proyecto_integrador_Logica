@@ -91,7 +91,40 @@ public class Grupo4View extends VerticalLayout {
         replit = "https://replit.com/@dannyedison75/Codigo1#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/MainCodigo1.png?alt=media&token=6f23b8ed-74e5-44ee-9a7e-c13330cd97f5&_gl=1*dk1x5q*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Nzk4MDYwMC4yNC4xLjE2OTc5ODIzMzYuNTIuMC4w";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+        // Algoritmo2
+        titulo1 = "Algoritmo 2";
+        titulo2 = "JUEGO DE ADIVINANZA DE CODIGO DE COLORES DE LAS RESISTENCIAS";
+        descripcion = "Programa para practicar el uso del código de colores en electrónica";
+        gist = "gist  <script src=\"https://gist.github.com/dannyedison/bbde62865931f27ddf5e84be9bc1404b.js\"></script>\r\n"
+                + //
+                "";
+        replit = "https://replit.com/@dannyedison75/Codigo1#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/MainCodigo1.png?alt=media&token=6f23b8ed-74e5-44ee-9a7e-c13330cd97f5&_gl=1*dk1x5q*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Nzk4MDYwMC4yNC4xLjE2OTc5ODIzMzYuNTIuMC4w";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
 
+    }
+
+    public HorizontalLayout algoritmo1() {
+        CalculadoraResistencias cr = new CalculadoraResistencias();
+
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.setAlignItems(Alignment.CENTER);
+        hl.setWidthFull();
+
+        // Inicio vl1
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image(
+                "https://f47ec6e8ca.cbaul-cdnwnd.com/b9a0fcea3766057deaebf52a7956b29e/200000057-e1c97e3bbe/codigo%20de%20colores.png",
+                ""));
+
+        // Inicio vl2
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
+        vl2.add(cr.calculadora());
+        hl.add(vl1);
+        hl.add(vl2);
+        return hl;
     }
 
     // Variables vl2
@@ -110,7 +143,7 @@ public class Grupo4View extends VerticalLayout {
     double valor;
     String colorAleatorio;
 
-    public HorizontalLayout algoritmo1() {
+    public HorizontalLayout algoritmo2() {
 
         HorizontalLayout hl = new HorizontalLayout();
         hl.setAlignItems(Alignment.CENTER);
@@ -120,7 +153,7 @@ public class Grupo4View extends VerticalLayout {
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
         vl1.add(new Image(
-                "https://futuroelectrico.com/wp-content/uploads/2020/02/resistencia-electrica-2.jpg",
+                "https://img.freepik.com/vector-premium/vector-resistencia-e-ilustracion-simbolo-componente-electronico-ciencias-educacion-fisica_786898-16.jpg",
                 ""));
 
         vl1.add("RECUERDA QUE LOS COLORES SON!:  ");
@@ -219,4 +252,5 @@ public class Grupo4View extends VerticalLayout {
 
         return hl;
     }
+
 }
