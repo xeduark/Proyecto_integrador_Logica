@@ -3,13 +3,16 @@ package com.example.application.views.grupo8;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import com.example.application.views.MainLayout;
 import com.example.application.views.Secciones;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.H4;
 import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -90,6 +93,11 @@ public class Grupo8View extends VerticalLayout {
 
     }
 
+    // calcularConsumo
+    private NumberField input1;
+    private NumberField input2;
+    H4 resultado;
+
     public HorizontalLayout algoritmo1() {
 
         VerticalLayout vl1 = new VerticalLayout();
@@ -103,40 +111,74 @@ public class Grupo8View extends VerticalLayout {
         hl.setAlignItems(Alignment.CENTER);
         hl.setWidthFull();
 
-        NumberField peso = new NumberField("Peso (kg)");
-        NumberField altura = new NumberField("Altura (m)");
-        Button calcular = new Button("Calcular IMC");
-        H3 salida = new H3();
-
-        calcular.addClickListener(event -> {
-            double valorPeso = peso.getValue();
-            double valorAltura = altura.getValue();
-            double imc = valorPeso / Math.pow(valorAltura, 2);
-            String info = "";
-            if (imc < 18.5) {
-                info = "Bajo peso";
-            } else if (imc >= 18.5 && imc < 24.9) {
-                info = "Peso saludable";
-            } else if (imc >= 25.0 && imc < 29.9) {
-                info = "Sobrepeso";
-            } else if (imc >= 30.0 && imc < 34.9) {
-                info = "Obesidad Clase 1";
-            } else if (imc >= 35.0 && imc < 39.9) {
-                info = "Obesidad Clase 2";
-            } else {
-                info = "Obesidad Clase 3";
-            }
-            String numeroFormateado = String.format("%.2f", imc);
-            salida.setText(String.valueOf(numeroFormateado + ", " + info));
+        Button btnCalcular = new Button("Calcular");
+        btnCalcular.addClickListener(event -> {
+            calcularConsumo();
         });
-        vl2.add(new H3("Calculadora Índice de Masa Corporal (IMC)"));
-        vl2.add(peso);
-        vl2.add(altura);
-        vl2.add(calcular);
-        vl2.add(salida);
+
+        resultado = new H4("");
+
+        // calcularConsumo
+        input1 = new NumberField("Por favor ingrese el kilometraje recorrido");
+        input2 = new NumberField("Ingrese la cantidad de combustible gastado en litros");
+
+        ComboBox<String> comboBox1 = new ComboBox<>("Por favor elija una opcion:");
+        comboBox1.setAllowCustomValue(true);
+        add(comboBox1);
+        comboBox1.setItems("Calcular el consumo de su motor por distancia recorrida en km",
+                "Calcular velocidad promedio", "Calcular autonomia");
+
+        comboBox1.addValueChangeListener(event -> {
+            String seleccion = comboBox1.getValue();
+            if (seleccion.equals("Calcular el consumo de su motor por distancia recorrida en km")) {
+                calcularConsumo();
+            }
+            if (seleccion.equals("Calcular velocidad promedio")) {
+                calcularVelocidad();
+            }
+            if (seleccion.equals("Calcular autonomia")) {
+                calcularAutonomia();
+            }
+
+        });
+
+        vl2.add(new H3("Calculos Mecanicos"));
+        vl2.add(comboBox1);
+        vl2.add(input1);
+        vl2.add(input2);
+        vl2.add(btnCalcular);
+        vl2.add(resultado);
+
         hl.add(vl1);
         hl.add(vl2);
         return hl;
+    }
+
+    public void calcularConsumo() {
+        double kilometraje = input1.getValue();
+        double consumo = input2.getValue();
+        resultado.setText(String.valueOf(kilometraje / consumo));
+    }
+
+    public void calcularVelocidad() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Por favor ingrese el kilometraje recorrido: ");
+        double kilometraje = entrada.nextDouble();
+        System.out.println("Por favor ingrese el tiempo que se demoro en horas: ");
+        double tiempo = entrada.nextDouble();
+        double resultado = kilometraje / tiempo;
+        System.out.println("Su velocidad promedio es: " + resultado + "km/h");
+
+    }
+
+    public void calcularAutonomia() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Por favor ingrese la capacidad de su tanque en litros: ");
+        double capacidad = entrada.nextDouble();
+        System.out.println("Ingrese el consumo de combustible en km/l: ");
+        double consumo = entrada.nextDouble();
+        double resultado = capacidad * consumo;
+        System.out.println("La autonomia de su moto es de " + resultado + " kilometros con el tanque actual.");
     }
 
 }
