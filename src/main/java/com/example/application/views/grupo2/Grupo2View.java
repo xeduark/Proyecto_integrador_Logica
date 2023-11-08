@@ -83,7 +83,7 @@ public class Grupo2View extends VerticalLayout {
                 "";
         gist = "<script src=\"https://gist.github.com/Rossember01/63564f1e77b00ea92602cdde17a5a616.js\"></script>";
         replit = "https://replit.com/@rossember01/Simuladorahorro#Main.java";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        diagrama = "https://app.code2flow.com/pHtSYu.svg";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
         // Algoritmo2
@@ -112,7 +112,7 @@ public class Grupo2View extends VerticalLayout {
 
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
+        vl1.add(new Image("https://firebasestorage.googleapis.com/v0/b/rossember-3af5f.appspot.com/o/ahorro.png?alt=media&token=fb1a6262-06b2-441d-8e8a-ed5a25364bb6&_gl=1*19kiq72*_ga*MjEwMDc4MTQ5NS4xNjk1NDIxNzg3*_ga_CW55HF8NVT*MTY5OTQwMTE3NC43LjEuMTY5OTQwNzM3OC4yNi4wLjA.", ""));
 
         VerticalLayout vl2 = new VerticalLayout();
         vl2.setAlignItems(Alignment.CENTER);
