@@ -92,10 +92,9 @@ public class Grupo2View extends VerticalLayout {
         titulo1 = "Algoritmo2";
         titulo2 = " Calculadora CDT";
         descripcion = "Este programa es una calculadora de certificados de depósito a término (CDT), la cual recopila información del usuario, monto a invertir, tasa de interés anual, y el plazo en meses, para luego calcular y mostrar el valor futuro.";
-        gist = "<script src=\"https://gist.github.com/Rossember01/61a6f6399da83e94c9b1f5b3da7ddd3a.js\"></script>\r\n" + //
-                "";
+        gist =" <script src=\"https://gist.github.com/Rossember01/a2704892a567929d16966b76701ac444.js\"></script>";
         replit = "https://replit.com/@rossember01/CalculadoraCDT-1#Main.java";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        diagrama = "https://app.code2flow.com/0THc66HxurxT.svg";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
         // Algoritmo3
@@ -105,7 +104,7 @@ public class Grupo2View extends VerticalLayout {
         gist = " <script src=\"https://gist.github.com/Rossember01/2bbcbf7ce451b108c6b1da44d5d8a07b.js\"></script>\r\n" + //
                 "";
         replit = "https://replit.com/@rossember01/Simuladorcredito#Main.java";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        diagrama = "https://app.code2flow.com/0THc66HxurxT.svg";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }
