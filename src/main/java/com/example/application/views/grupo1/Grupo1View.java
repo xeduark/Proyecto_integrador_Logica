@@ -94,34 +94,17 @@ public class Grupo1View extends VerticalLayout {
                 gist = "<script src=\"https://gist.github.com/ZullyVega/ecf6df1a098022a773b90d7ba7bce111.js\"></script>";
                 replit = "https://replit.com/@zvegaon/Esfera#Main.java";
                 diagrama = "https://firebasestorage.googleapis.com/v0/b/evidencialp.appspot.com/o/Algoritmo1.png?alt=media&token=1fa6d920-be66-4d6f-96cf-4d128cac9a2d&_gl=1*lifiqy*_ga*MjI2MzQ2NjM4LjE2OTgxODc1OTU.*_ga_CW55HF8NVT*MTY5ODE4NzU5NS4xLjEuMTY5ODE4ODE2Mi41NS4wLjA";
-                add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+                // add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist,
+                // replit, diagrama));
 
-                gist = "<script src=\"https://gist.github.com/ZullyVega/ecf6df1a098022a773b90d7ba7bce111.js\"></script>";
-                replit = "https://replit.com/@zvegaon/Esfera#Main.java";
-                diagrama = "https://firebasestorage.googleapis.com/v0/b/evidencialp.appspot.com/o/Algoritmo1.png?alt=media&token=1fa6d920-be66-4d6f-96cf-4d128cac9a2d&_gl=1*lifiqy*_ga*MjI2MzQ2NjM4LjE2OTgxODc1OTU.*_ga_CW55HF8NVT*MTY5ODE4NzU5NS4xLjEuMTY5ODE4ODE2Mi41NS4wLjA";
-                add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
                 // Algoritmo2
-                titulo1 = "Algoritmo 1";
-                titulo2 = "Calculadora del área del triángulo, media y desviación estándar de números";
-                descripcion = "La Calculadora del área del triángulo, media y desviación estándar de números es una herramienta versátil que combina tres funciones matemáticas fundamentales.\r\n"
-                                + //
-                                "\r\n" + //
-                                "Área del triángulo: Permite calcular el área de un triángulo a partir de la longitud de sus lados o utilizando la fórmula de Herón, que involucra semi perímetros.\r\n"
-                                + //
-                                "\r\n" + //
-                                "Media (promedio): Calcula la media aritmética de un conjunto de números proporcionados. La media es la suma de todos los valores dividida por la cantidad de valores, proporcionando un valor representativo del conjunto.\r\n"
-                                + //
-                                "\r\n" + //
-                                "Desviación estándar: Determina la dispersión o variabilidad de un conjunto de números. La desviación estándar mide qué tan dispersos están los valores con respecto a la media. Un valor más alto indica una mayor variabilidad.\r\n"
-                                + //
-                                "";
-
+                titulo1 = "Algoritmo 2";
+                titulo2 = "Calculadora del área del triángulo, media y desviación estándar de números.";
+                descripcion = "La Calculadora del área del triángulo, media y desviación estándar de números es una herramienta versátil que combina tres funciones matemáticas fundamentales.";
                 gist = "<script src=\"https://gist.github.com/ZullyVega/ecf6df1a098022a773b90d7ba7bce111.js\"></script>";
                 replit = "https://replit.com/@zvegaon/Esfera#Main.java";
                 diagrama = "https://firebasestorage.googleapis.com/v0/b/evidencialp.appspot.com/o/code2flow_dEVuPL.png?alt=media&token=f2d663b1-6215-4367-84ef-c9c11d737e68";
-                //add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
-
-                
+                add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
 
         }
 
@@ -174,35 +157,103 @@ public class Grupo1View extends VerticalLayout {
         int cantidadNumeros = 0;
         int capturaDatos = 0;
 
-        // public HorizontalLayout algoritmo2() {
+        public HorizontalLayout algoritmo2() {
 
-        //         VerticalLayout vl1 = new VerticalLayout();
-        //         vl1.setAlignItems(Alignment.CENTER);
-        //         vl1.add(new Image(
-        //                         "https://firebasestorage.googleapis.com/v0/b/pi-equipo-1.appspot.com/o/41a1bf22-4bed-4d9b-8eef-c1417746ef65.jfif?alt=media&token=4897e9e3-6150-444f-907a-18cd6c374f97&_gl=1*1gas3p4*_ga*Mzk3NDA0NzI5LjE2OTY5ODUxNTI.*_ga_CW55HF8NVT*MTY5Njk4NTE1Mi4xLjEuMTY5Njk4NTQyNy42LjAuMA..",
-        //                         ""));
-        //         VerticalLayout vl2 = new VerticalLayout();
-        //         vl2.setAlignItems(Alignment.CENTER);
+                VerticalLayout vl1 = new VerticalLayout();
+                vl1.setAlignItems(Alignment.CENTER);
+                vl1.add(new Image(
+                                "https://firebasestorage.googleapis.com/v0/b/pi-equipo-1.appspot.com/o/41a1bf22-4bed-4d9b-8eef-c1417746ef65.jfif?alt=media&token=4897e9e3-6150-444f-907a-18cd6c374f97&_gl=1*1gas3p4*_ga*Mzk3NDA0NzI5LjE2OTY5ODUxNTI.*_ga_CW55HF8NVT*MTY5Njk4NTE1Mi4xLjEuMTY5Njk4NTQyNy42LjAuMA..",
+                                ""));
+                VerticalLayout vl2 = new VerticalLayout();
+                vl2.setAlignItems(Alignment.CENTER);
 
-        //         HorizontalLayout hl = new HorizontalLayout();
-        //         hl.setAlignItems(Alignment.CENTER);
-        //         hl.setWidthFull();
+                HorizontalLayout hl = new HorizontalLayout();
+                hl.setAlignItems(Alignment.CENTER);
+                hl.setWidthFull();
 
-        //         Button btn = new Button("");
-        //         btn.setVisible(false);
+                Button btn = new Button("");
+                btn.setVisible(false);
 
-        //         NumberField valor1 = new NumberField("");
-        //         valor1.setVisible(false);
+                NumberField valor1 = new NumberField("");
+                valor1.setVisible(false);
 
-        //         NumberField valor2 = new NumberField("");
-        //         valor2.setVisible(false);
+                NumberField valor2 = new NumberField("");
+                valor2.setVisible(false);
 
-        //         ComboBox<String> comboBox = new ComboBox<>("Tipo");
-        //         comboBox.setAllowCustomValue(true);
+                ComboBox<String> comboBox = new ComboBox<>("Tipo");
+                comboBox.setAllowCustomValue(true);
 
-        //         H3 mensaje1 = new H3("");
-        //         H3 mensaje2 = new H3("");
+                H3 mensaje1 = new H3("");
+                H3 mensaje2 = new H3("");
 
-        // }
+                comboBox.setItems("Calcular el área de un triángulo",
+                                "Calcular la media y desviación estándar de una lista de números");
+
+                comboBox.addValueChangeListener(event -> {
+                        String select = comboBox.getValue();
+                        if (select.equals("Calcular el área de un triángulo")) {
+                                modo = 0;
+                                mensaje1.setText("Calcular el área de un triángulo");
+                                btn.setVisible(true);
+                                btn.setText("Calcular");
+                                valor1.setLabel("Base");
+                                valor1.setVisible(true);
+                                valor1.setValue(null);
+                                valor2.setLabel("Altura");
+                                valor2.setVisible(true);
+                                valor2.setValue(null);
+                        }
+                        if (select.equals("Calcular la media y desviación estándar de una lista de números")) {
+                                modo = 1;
+                                mensaje1.setText("Calcular la media y desviación estándar de una lista de números");
+                                btn.setVisible(true);
+                                btn.setText("Ingresar");
+                                valor1.setLabel("Cantidad de números");
+                                valor1.setVisible(true);
+                                valor1.setValue(null);
+                                valor2.setVisible(false);
+                                valor2.setValue(null);
+                        }
+                });
+
+                btn.addClickListener(event -> {
+                        if (modo == 0) {
+                                if (valor1.getValue() != null && valor2.getValue() != null) {
+                                        double temp = calcularAreaTriangulo(valor1.getValue().doubleValue(),
+                                                        valor1.getValue().doubleValue());
+                                        mensaje2.setText(String.valueOf(temp));
+                                        valor1.setValue(null);
+                                        valor2.setValue(null);
+                                }
+                        }
+                        if (modo == 1) {
+                                if (valor1.getValue() != null && (int) valor1.getValue().doubleValue() > 0) {
+                                        if (capturaDatos == 0) {
+                                                cantidadNumeros = (int) valor1.getValue().doubleValue();
+                                        }
+                                        else{
+                                                
+                                        }
+
+                                }
+                        }
+                });
+
+                vl2.add(mensaje1);
+                vl2.add(comboBox);
+                vl2.add(valor1);
+                vl2.add(valor2);
+                vl2.add(btn);
+                vl2.add(mensaje2);
+
+                hl.add(vl1);
+                hl.add(vl2);
+                return hl;
+
+        }
+
+        public double calcularAreaTriangulo(double base, double altura) {
+                return 0.5 * base * altura;
+        }
 
 }
