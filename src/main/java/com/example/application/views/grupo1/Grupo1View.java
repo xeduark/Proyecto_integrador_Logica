@@ -93,6 +93,22 @@ public class Grupo1View extends VerticalLayout {
         replit = "https://replit.com/@zvegaon/Esfera#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/evidencialp.appspot.com/o/Algoritmo1.png?alt=media&token=1fa6d920-be66-4d6f-96cf-4d128cac9a2d&_gl=1*lifiqy*_ga*MjI2MzQ2NjM4LjE2OTgxODc1OTU.*_ga_CW55HF8NVT*MTY5ODE4NzU5NS4xLjEuMTY5ODE4ODE2Mi41NS4wLjA";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+        // Algoritmo2
+        titulo1 = "Algoritmo 1";
+        titulo2 = "Calculadora del área del triángulo, media y desviación estándar de números";
+        descripcion = "La Calculadora del área del triángulo, media y desviación estándar de números es una herramienta versátil que combina tres funciones matemáticas fundamentales.\r\n" + //
+                        "\r\n" + //
+                        "Área del triángulo: Permite calcular el área de un triángulo a partir de la longitud de sus lados o utilizando la fórmula de Herón, que involucra semi perímetros.\r\n" + //
+                        "\r\n" + //
+                        "Media (promedio): Calcula la media aritmética de un conjunto de números proporcionados. La media es la suma de todos los valores dividida por la cantidad de valores, proporcionando un valor representativo del conjunto.\r\n" + //
+                        "\r\n" + //
+                        "Desviación estándar: Determina la dispersión o variabilidad de un conjunto de números. La desviación estándar mide qué tan dispersos están los valores con respecto a la media. Un valor más alto indica una mayor variabilidad.\r\n" + //
+                        "";
+
+        gist = "<script src=\"https://gist.github.com/ZullyVega/ecf6df1a098022a773b90d7ba7bce111.js\"></script>";
+        replit = "https://replit.com/@zvegaon/Esfera#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/evidencialp.appspot.com/o/code2flow_dEVuPL.png?alt=media&token=f2d663b1-6215-4367-84ef-c9c11d737e68";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }
 
@@ -146,6 +162,7 @@ public class Grupo1View extends VerticalLayout {
         return hl;
 
 
-    }  
+    } 
+     
 
 }
