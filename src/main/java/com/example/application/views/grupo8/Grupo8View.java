@@ -100,11 +100,23 @@ public class Grupo8View extends VerticalLayout {
     private NumberField input2;
     H4 resultado;
 
+    // calcularVelocidad
+    private NumberField input3;
+    private NumberField input4;
+    H4 resultado1;
+
+    // calcularAutonomia
+    private NumberField input5;
+    private NumberField input6;
+    H4 resultado2;
+
     public HorizontalLayout algoritmo1() {
 
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
+        vl1.add(new Image(
+                "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/calculos%20mecancicos%20(1).jpg?alt=media&token=c8d65b86-bf8c-4d30-a771-2b6f2c570750",
+                ""));
 
         VerticalLayout vl2 = new VerticalLayout();
         vl2.setAlignItems(Alignment.CENTER);
@@ -113,32 +125,106 @@ public class Grupo8View extends VerticalLayout {
         hl.setAlignItems(Alignment.CENTER);
         hl.setWidthFull();
 
+        // calcularConsumo
         Button btnCalcular = new Button("Calcular");
         btnCalcular.addClickListener(event -> {
             calcularConsumo();
         });
+        btnCalcular.setVisible(false);
 
         resultado = new H4("");
+        resultado.setVisible(false);
+
+        // calcularVelocidad
+        Button btnCalcular1 = new Button("Calcular");
+        btnCalcular1.addClickListener(event -> {
+            calcularVelocidad();
+        });
+        btnCalcular1.setVisible(false);
+
+        resultado1 = new H4("");
+        resultado1.setVisible(false);
+
+        // calcularAutonomia
+        Button btnCalcular2 = new Button("Calcular");
+        btnCalcular2.addClickListener(event -> {
+            calcularAutonomia();
+        });
+        btnCalcular2.setVisible(false);
+
+        resultado2 = new H4("");
+        resultado2.setVisible(false);
 
         // calcularConsumo
-        input1 = new NumberField("Por favor ingrese el kilometraje recorrido");
-        input2 = new NumberField("Ingrese la cantidad de combustible gastado en litros");
+        input1 = new NumberField("kilometraje recorrido");
+        input1.setVisible(false);
+        input2 = new NumberField("Combustible gastado lts");
+        input2.setVisible(false);
+
+        // calcularVelocidad
+        input3 = new NumberField("kilometraje recorrido");
+        input3.setVisible(false);
+        input4 = new NumberField("Tiempo demorado");
+        input4.setVisible(false);
+
+        // calcularAutonomia
+        input5 = new NumberField("Capacidad del tanque lts");
+        input5.setVisible(false);
+        input6 = new NumberField("Consumo combustible km/h");
+        input6.setVisible(false);
 
         ComboBox<String> comboBox1 = new ComboBox<>("Por favor elija una opcion:");
         comboBox1.setAllowCustomValue(true);
         add(comboBox1);
-        comboBox1.setItems("Calcular el consumo de su motor por distancia recorrida en km",
-                "Calcular velocidad promedio", "Calcular autonomia");
+        comboBox1.setItems("Consumo del motor",
+                "Velocidad promedio", "Calcular autonomia");
 
         comboBox1.addValueChangeListener(event -> {
             String seleccion = comboBox1.getValue();
-            if (seleccion.equals("Calcular el consumo de su motor por distancia recorrida en km")) {
+            if (seleccion.equals("Consumo del motor")) {
+                input1.setVisible(true);
+                input2.setVisible(true);
+                input3.setVisible(false);
+                input4.setVisible(false);
+                input5.setVisible(false);
+                input6.setVisible(false);
+                btnCalcular.setVisible(true);
+                btnCalcular1.setVisible(false);
+                btnCalcular2.setVisible(false);
+                resultado.setVisible(true);
+                resultado1.setVisible(false);
+                resultado2.setVisible(false);
                 calcularConsumo();
             }
-            if (seleccion.equals("Calcular velocidad promedio")) {
+            if (seleccion.equals("Velocidad promedio")) {
+                input1.setVisible(false);
+                input2.setVisible(false);
+                input3.setVisible(true);
+                input4.setVisible(true);
+                input5.setVisible(false);
+                input6.setVisible(false);
+                btnCalcular.setVisible(false);
+                btnCalcular1.setVisible(true);
+                btnCalcular2.setVisible(false);
+                resultado.setVisible(false);
+                resultado1.setVisible(true);
+                resultado2.setVisible(false);
                 calcularVelocidad();
+
             }
             if (seleccion.equals("Calcular autonomia")) {
+                input1.setVisible(false);
+                input2.setVisible(false);
+                input3.setVisible(false);
+                input4.setVisible(false);
+                input5.setVisible(true);
+                input6.setVisible(true);
+                btnCalcular.setVisible(false);
+                btnCalcular1.setVisible(false);
+                btnCalcular2.setVisible(true);
+                resultado.setVisible(false);
+                resultado1.setVisible(false);
+                resultado2.setVisible(true);
                 calcularAutonomia();
             }
 
@@ -148,8 +234,16 @@ public class Grupo8View extends VerticalLayout {
         vl2.add(comboBox1);
         vl2.add(input1);
         vl2.add(input2);
+        vl2.add(input3);
+        vl2.add(input4);
+        vl2.add(input5);
+        vl2.add(input6);
         vl2.add(btnCalcular);
+        vl2.add(btnCalcular1);
+        vl2.add(btnCalcular2);
         vl2.add(resultado);
+        vl2.add(resultado1);
+        vl2.add(resultado2);
 
         hl.add(vl1);
         hl.add(vl2);
@@ -163,24 +257,15 @@ public class Grupo8View extends VerticalLayout {
     }
 
     public void calcularVelocidad() {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Por favor ingrese el kilometraje recorrido: ");
-        double kilometraje = entrada.nextDouble();
-        System.out.println("Por favor ingrese el tiempo que se demoro en horas: ");
-        double tiempo = entrada.nextDouble();
-        double resultado = kilometraje / tiempo;
-        System.out.println("Su velocidad promedio es: " + resultado + "km/h");
-
+        double kilometraje = input3.getValue();
+        double tiempo = input4.getValue();
+        resultado1.setText(String.valueOf(kilometraje / tiempo));
     }
 
     public void calcularAutonomia() {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Por favor ingrese la capacidad de su tanque en litros: ");
-        double capacidad = entrada.nextDouble();
-        System.out.println("Ingrese el consumo de combustible en km/l: ");
-        double consumo = entrada.nextDouble();
-        double resultado = capacidad * consumo;
-        System.out.println("La autonomia de su moto es de " + resultado + " kilometros con el tanque actual.");
+        double capacidad = input5.getValue();
+        double consumo = input6.getValue();
+        resultado2.setText(String.valueOf(capacidad * consumo));
     }
 
 }
