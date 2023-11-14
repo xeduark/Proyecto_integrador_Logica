@@ -94,8 +94,7 @@ public class Grupo1View extends VerticalLayout {
                 gist = "<script src=\"https://gist.github.com/ZullyVega/ecf6df1a098022a773b90d7ba7bce111.js\"></script>";
                 replit = "https://replit.com/@zvegaon/Esfera#Main.java";
                 diagrama = "https://firebasestorage.googleapis.com/v0/b/evidencialp.appspot.com/o/Algoritmo1.png?alt=media&token=1fa6d920-be66-4d6f-96cf-4d128cac9a2d&_gl=1*lifiqy*_ga*MjI2MzQ2NjM4LjE2OTgxODc1OTU.*_ga_CW55HF8NVT*MTY5ODE4NzU5NS4xLjEuMTY5ODE4ODE2Mi41NS4wLjA";
-                // add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist,
-                // replit, diagrama));
+                add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
                 // Algoritmo2
                 titulo1 = "Algoritmo 2";
@@ -230,9 +229,8 @@ public class Grupo1View extends VerticalLayout {
                                 if (valor1.getValue() != null && (int) valor1.getValue().doubleValue() > 0) {
                                         if (capturaDatos == 0) {
                                                 cantidadNumeros = (int) valor1.getValue().doubleValue();
-                                        }
-                                        else{
-                                                
+                                        } else {
+
                                         }
 
                                 }
