@@ -7,6 +7,7 @@ import java.util.Map;
 import com.example.application.views.MainLayout;
 import com.example.application.views.Secciones;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
@@ -19,6 +20,8 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
+import java.util.HashMap;
+import java.util.Map;
 
 @PageTitle("Grupo 7")
 @Route(value = "grupo-7", layout = MainLayout.class)
@@ -81,12 +84,15 @@ public class Grupo7View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Consulta la distancia de los planetas del sistema solar a distancia en kilómetros desde la tierra";
-        descripcion = "En este algoritmo podremos obtener la distancia entre la tierra y los planetas del sistema solar.\r\n" + //
+        descripcion = "En este algoritmo podremos obtener la distancia entre la tierra y los planetas del sistema solar.\r\n"
+                + //
                 "\r\n" + //
                 "\r\n" + //
-                "La astronomía es una ciencia que estudia el universo y todos sus componentes. Estudia también los fenómenos que afectan a los cuerpos celestes, sus movimientos y comportamientos esperables.\r\n" + //
+                "La astronomía es una ciencia que estudia el universo y todos sus componentes. Estudia también los fenómenos que afectan a los cuerpos celestes, sus movimientos y comportamientos esperables.\r\n"
+                + //
                 "\r\n" + //
-                "Entre los cuerpos celestes se encuentran los planetas, estrellas, satélites, cometas, meteoroides, materia interestelar y materia oscura\r\n" + //
+                "Entre los cuerpos celestes se encuentran los planetas, estrellas, satélites, cometas, meteoroides, materia interestelar y materia oscura\r\n"
+                + //
                 "\r\n" + //
                 "";
         gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
@@ -94,7 +100,27 @@ public class Grupo7View extends VerticalLayout {
         diagrama = "";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
+        // Algoritmo2
+        titulo1 = "Algoritmo 2";
+        titulo2 = "Consulta la distancia de los planetas del sistema solar a distancia en kilómetros desde la tierra";
+        descripcion = "En este algoritmo podremos obtener la distancia entre la tierra y los planetas del sistema solar.\r\n"
+                + //
+                "\r\n" + //
+                "\r\n" + //
+                "La astronomía es una ciencia que estudia el universo y todos sus componentes. Estudia también los fenómenos que afectan a los cuerpos celestes, sus movimientos y comportamientos esperables.\r\n"
+                + //
+                "\r\n" + //
+                "Entre los cuerpos celestes se encuentran los planetas, estrellas, satélites, cometas, meteoroides, materia interestelar y materia oscura\r\n"
+                + //
+                "\r\n" + //
+                "";
+        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
+        replit = "";
+        diagrama = "";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+
     }
+
     public HorizontalLayout algoritmo1() {
 
         VerticalLayout vl1 = new VerticalLayout();
@@ -148,6 +174,16 @@ public class Grupo7View extends VerticalLayout {
 
     public HorizontalLayout algoritmo2() {
 
+        Map<String, Double> distanciasPlanetas = new HashMap<>();
+        distanciasPlanetas.put("Mercurio", 57.9);
+        distanciasPlanetas.put("Venus", 108.2);
+        distanciasPlanetas.put("Tierra", 0.0);
+        distanciasPlanetas.put("Marte", 227.9);
+        distanciasPlanetas.put("Jupiter", 778.3);
+        distanciasPlanetas.put("Saturno", 1427.0);
+        distanciasPlanetas.put("Urano", 2870.7);
+        distanciasPlanetas.put("Neptuno", 4496.7);
+
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
         vl1.add(new Image(
@@ -161,100 +197,27 @@ public class Grupo7View extends VerticalLayout {
         hl.setAlignItems(Alignment.CENTER);
         hl.setWidthFull();
 
-        TextField Equipo1 = new TextField("Equipo 1");
-        TextField Equipo2 = new TextField("Equipo 2");
-        Button simular = new Button("Simulación");
-        H3 m1 = new H3("");
+        H3 mensaje1 = new H3("");
 
-        simular.addClickListener(event -> {
-            int puntajeUno = 0, puntajeDos = 0;
-            int partido = 0;
+        ComboBox<String> comboBox1 = new ComboBox<>("Banda 1");
+        comboBox1.setAllowCustomValue(true);
+        add(comboBox1);
+        comboBox1.setItems("Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno");
 
-            while (partido <= 8) {
-                int goles1 = (int) (Math.random() * 5);
-                int goles2 = (int) (Math.random() * 5);
-                if (goles1 > goles2) {
-                    puntajeUno += 3;
-                } else if (goles2 > goles1) {
-                    puntajeDos += 3;
-                } else if (goles1 > 0 && goles1 == goles2) {
-                    puntajeUno++;
-                    puntajeDos++;
-                } else {
-                    System.out.print("Partido no valido");
-                    continue;
-                }
-                partido++;
-                System.out.print("Resultado del partido " + partido + "\n");
-                System.out
-                        .print(Equipo1.getValue() + " <" + goles1 + " - " + goles2 + "> " + Equipo2.getValue() + "\n");
-                if (puntajeUno >= 15 || puntajeDos >= 15) {
-                    break;
-                }
+        comboBox1.addValueChangeListener(event -> {
+            String nombrePlaneta = comboBox1.getValue();
+            Double distancia = distanciasPlanetas.get(nombrePlaneta);
+            if (distancia != null) {
+                mensaje1.setText("La distancia de " + nombrePlaneta + " a la Tierra es " + String.valueOf(distancia)
+                        + " millones de kilómetros.");
             }
-            partido--;
-            String m2 = ("Se jugaron " + partido + " partidos :"+" "+"El " + Equipo1.getValue() + " consiguió " + puntajeUno + " puntos, "+" "+ "El " + Equipo2.getValue() + " consiguió " + puntajeDos + " puntos");
-           
-            if (puntajeUno > puntajeDos) {
-                m2+= " Felicitaciones, su equipo ganó!!";
-                // System.out.print(" Felicitaciones, su equipo ganó");
-            } else {
-                m2+= " Lo sentimos, su equipo no ganó...";
-                // System.out.print(" Lo sentimos, su equipo no ganó");
-            }
-            m1.setText(m2);
-
         });
-        vl2.add(new H3("Ingresa el nombre de el equipo que te gusta y un rival"));
-        vl2.add(Equipo1);
-        vl2.add(Equipo2);
-        vl2.add(simular);
-        vl2.add(m1);
+
+        vl2.add(comboBox1);
+        vl2.add(mensaje1);
         hl.add(vl1);
         hl.add(vl2);
         return hl;
     }
-    double dis, min, seg, cen, tse, vms, vkh;
-    public HorizontalLayout algoritmo3() {
-
-        VerticalLayout vl1 = new VerticalLayout();
-        vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image(
-                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fcorredor-pista-atletismo-768x512-fotor-20231031102144.jpg?alt=media&token=ebf53579-464c-4e40-a598-e9ca2278b63a&_gl=1*pkb7i8*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODc2NDQ3Ni44LjEuMTY5ODc2NTcyOC40Ni4wLjA.",
-                ""));
-
-                VerticalLayout vl2 = new VerticalLayout();
-                vl2.setAlignItems(Alignment.CENTER);
-        
-                HorizontalLayout hl = new HorizontalLayout();
-                hl.setAlignItems(Alignment.CENTER);
-                hl.setWidthFull();
-        
-                NumberField dis = new NumberField("distancia (en metros):");
-                NumberField min = new NumberField("distancia recorrida en minutos:");
-                NumberField seg = new NumberField("distancia recorrida en segundos:");
-                NumberField cen = new NumberField("distancia recorrida en centésimas:");
-                Button calcular = new Button("Calcular");
-                H3 result = new H3("0");
-        
-                calcular.addClickListener(event -> {
-
-                    vkh=((dis.getValue()/((min.getValue()*60)+seg.getValue()+(cen.getValue()/100)))*3600)/1000;
-                    result.setText(String.valueOf("La velocidad es de: "+vkh+" km/h"));
-                });
-        
-                vl2.add(new H3("Eres rapido? vamos a averiguarlo..."));
-                vl2.add(dis);
-                vl2.add(min);
-                vl2.add(seg);
-                vl2.add(cen);
-                vl2.add(calcular);
-        
-                vl2.add(result);
-                hl.add(vl1);
-                hl.add(vl2);
-                return hl;
-    }
-
 
 }
