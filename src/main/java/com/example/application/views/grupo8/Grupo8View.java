@@ -87,10 +87,26 @@ public class Grupo8View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Calculos Mecanicos";
+        descripcion = ": :Este ejercicio tiene como objetivo simular la caída libre de un objeto desde una altura inicial determinada bajo la influencia de la gravedad. La idea es calcular y mostrar varios aspectos del movimiento del objeto, incluyendo el tiempo que tarda en caer y la velocidad con la que impacta en el suelo";
+        gist = "<script src=\"https://gist.github.com/2eaa2291771e2ad053b258597f1681bb.git\"></script>";
+        replit = "https://replit.com/@Juan-CamiloC835/casoIntegrador2#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/diagrama%20de%20flujo%20proyecto%20integrador1.png?alt=media&token=09d3cbdb-0c0b-41fd-bbc0-59efbdb591cc";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+        // Algoritmo2
+        titulo1 = "Algoritmo 2";
+        titulo2 = "Simulador Cambio de marchas moto";
         descripcion = ": En este programa tenemos varias opciones que el cliente puede consultar las cuales son preguntas que relacionamos con el diario vivir de los propietarios de vehículos. Entre las opciones está calcular velocidad promedio a la cual viajaron en su vehículo con una distancia y un tiempo determinado ,en la opción de calcular autonomía de un vehículo es básicamente la distancia máxima que puede llegar a circular un vehículo sin necesidad de parar a repostar, es decir, hasta que tengamos que rellenar el combustible otra vez. y en la opción consumo de su motor por distancia recorrida es muy útil para llevar un control de consumo de su máquina y estar atento llegado el caso de que el consumo aumente";
         gist = "<script src=\"https://gist.github.com/camilohl94/fed15f439e35bb6ce14e779cddae63ff.js\"></script>";
         replit = "https://replit.com/@Juan-CamiloC835/casoIntegrado1#Main.java";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/diagrama%20de%20flujo%20proyecto%20integrador1.png?alt=media&token=09d3cbdb-0c0b-41fd-bbc0-59efbdb591cc";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/diagrama%20de%20flujo%20proyecto%20integrador%202.png?alt=media&token=9106ccdd-d72c-4302-8a8d-9584a6235e7a";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+        // Algoritmo3
+        titulo1 = "Algoritmo 3";
+        titulo2 = "Simulador caída libre de objetos";
+        descripcion = ": El Simulador de Cambio de Marchas de una moto es una aplicación interactiva que te permite experimentar cómo cambian las marchas en una moto según la velocidad y las RPM del motor. Ingresa la velocidad actual en kilómetros por hora y las revoluciones por minuto del motor, y el simulador te indicará la marcha más adecuada en función de esos datos. Explora cómo cambia el comportamiento de la moto al modificar estas variables y comprende cómo los ingenieros diseñan sistemas de transmisión para lograr un rendimiento óptimo";
+        gist = "<script src=\"https://gist.github.com/8beea1c9f1e29259368036376541ae14.git\"></script>";
+        replit = "https://replit.com/@Juan-CamiloC835/casoIntegrador3#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/digrama%20de%20flujo%20caso%20integrador%203.png?alt=media&token=99888dfe-b7a0-4e80-9e89-f7ccbf6e7086";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }
