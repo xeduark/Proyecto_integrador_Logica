@@ -81,19 +81,13 @@ public class Grupo5View extends VerticalLayout {
         String diagrama;
 
         // Algoritmo1
-        // titulo1 = "Algoritmo 1";
-        // titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        // descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para
-        // evaluar si una persona tiene un peso saludable en relación con su altura. Se
-        // calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su
-        // altura en metros. La fórmula básica del IMC es la siguiente:";
-        // gist = "<script
-        // src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        // replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
-        // diagrama =
-        // "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
-        // add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist,
-        // replit, diagrama));
+        titulo1 = "Algoritmo 1";
+        titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
+        descripcion = "El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar si una persona tiene un peso saludable en relación con su altura. Se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. La fórmula básica del IMC es la siguiente:";
+        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
+        replit = "https://replit.com/@jhonvalencia3/ProyectoPrueba";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/Proyecto%20Integrador%2FDiagrama.svg?alt=media&token=e04cad73-fd1c-4972-a571-da1389d04689";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
         // Algoritmo2
         titulo1 = "Algoritmo 2";
@@ -107,55 +101,6 @@ public class Grupo5View extends VerticalLayout {
     }
 
     public HorizontalLayout algoritmo1() {
-
-        VerticalLayout vl1 = new VerticalLayout();
-        vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
-
-        VerticalLayout vl2 = new VerticalLayout();
-        vl2.setAlignItems(Alignment.CENTER);
-
-        HorizontalLayout hl = new HorizontalLayout();
-        hl.setAlignItems(Alignment.CENTER);
-        hl.setWidthFull();
-
-        NumberField peso = new NumberField("Peso (kg)");
-        NumberField altura = new NumberField("Altura (m)");
-        Button calcular = new Button("Calcular IMC");
-        H3 salida = new H3();
-
-        calcular.addClickListener(event -> {
-            double valorPeso = peso.getValue();
-            double valorAltura = altura.getValue();
-            double imc = valorPeso / Math.pow(valorAltura, 2);
-            String info = "";
-            if (imc < 18.5) {
-                info = "Bajo peso";
-            } else if (imc >= 18.5 && imc < 24.9) {
-                info = "Peso saludable";
-            } else if (imc >= 25.0 && imc < 29.9) {
-                info = "Sobrepeso";
-            } else if (imc >= 30.0 && imc < 34.9) {
-                info = "Obesidad Clase 1";
-            } else if (imc >= 35.0 && imc < 39.9) {
-                info = "Obesidad Clase 2";
-            } else {
-                info = "Obesidad Clase 3";
-            }
-            String numeroFormateado = String.format("%.2f", imc);
-            salida.setText(String.valueOf(numeroFormateado + ", " + info));
-        });
-        vl2.add(new H3("Calculadora Índice de Masa Corporal (IMC)"));
-        vl2.add(peso);
-        vl2.add(altura);
-        vl2.add(calcular);
-        vl2.add(salida);
-        hl.add(vl1);
-        hl.add(vl2);
-        return hl;
-    }
-
-    public HorizontalLayout algoritmo2() {
         int numeroMesas = 20;
         Restaurante restaurante = new Restaurante(numeroMesas);
 
@@ -257,6 +202,95 @@ public class Grupo5View extends VerticalLayout {
         vl2.add(numeroMesa);
         vl2.add(btnReserva);
         vl2.add(resultado);
+        hl.add(vl1);
+        hl.add(vl2);
+
+        return hl;
+
+    }
+
+    Hotel hotelElegido;
+
+    public HorizontalLayout algoritmo2() {
+
+        Hotel hotel1 = new Hotel("Hotel Dan Jarton", 10, 100.0);
+        Hotel hotel2 = new Hotel("Hotel DeCamarón", 20, 120.0);
+        Hotel hotel3 = new Hotel("Hotel Milton", 15, 150.0);
+
+        Hotel[] hoteles = { hotel1, hotel2, hotel3 };
+
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
+
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
+
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.setAlignItems(Alignment.CENTER);
+        hl.setWidthFull();
+
+        H3 mensaje1 = new H3("");
+        mensaje1.setVisible(false);
+        H3 mensaje2 = new H3("");
+        mensaje2.setVisible(false);
+        H3 mensaje3 = new H3("");
+        mensaje3.setVisible(false);
+
+        ComboBox<String> comboBox1 = new ComboBox<>("Reserva Hotel");
+        comboBox1.setAllowCustomValue(true);
+        comboBox1.setItems("Hotel Dan Jarton", "Hotel DeCamarón", "Hotel Milton");
+
+        NumberField cantidad = new NumberField("H");
+        cantidad.setVisible(false);
+
+        Button calcular = new Button("Calcular");
+        calcular.setVisible(false);
+
+        calcular.addClickListener(event -> {
+
+            boolean reservaExitosa = hotelElegido.reservarHabitacion((int) cantidad.getValue().doubleValue());
+            if (reservaExitosa) {
+                mensaje3.setVisible(true);
+                String temp = "Reserva exitosa en " + hotelElegido.nombre;
+                double costoTotal = hotelElegido.calcularCostoTotal((int) cantidad.getValue().doubleValue());
+                temp += " El costo total es $" + costoTotal;
+                mensaje3.setText(temp);
+            }
+
+        });
+
+        comboBox1.addValueChangeListener(event -> {
+            String hotel = comboBox1.getValue();
+
+            if (hotel.equals("Hotel Dan Jarton")) {
+                hotelElegido = hoteles[0];
+                mensaje1.setVisible(true);
+                mensaje2.setVisible(true);
+
+            }
+            if (hotel.equals("Hotel DeCamarón")) {
+                hotelElegido = hoteles[1];
+            }
+            if (hotel.equals("Hotel Milton")) {
+                hotelElegido = hoteles[2];
+            }
+
+            mensaje1.setText("Ha elegido el hotel " + hotelElegido.nombre);
+            mensaje2.setText(hotelElegido.mostrarDisponibilidad());
+            cantidad.setVisible(true);
+            cantidad.setLabel("Reservar:");
+            calcular.setVisible(true);
+
+        });
+
+        vl2.add(comboBox1);
+        vl2.add(mensaje1);
+        vl2.add(mensaje2);
+        vl2.add(cantidad);
+        vl2.add(calcular);
+        vl2.add(mensaje3);
+
         hl.add(vl1);
         hl.add(vl2);
 
