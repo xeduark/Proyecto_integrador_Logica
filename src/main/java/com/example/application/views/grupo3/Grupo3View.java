@@ -45,8 +45,8 @@ public class Grupo3View extends VerticalLayout {
         H2 t2 = new H2("Deportes y Salud");
         t1.getStyle().set("color", "white");
         t2.getStyle().set("color", "white");
-        t1.getStyle().set("text-shadow", "#000 3px 0 15px");
-        t2.getStyle().set("text-shadow", "#000 3px 0 15px");
+        t1.getStyle().set("text-shadow", "#000 6px 0 15px");
+        t2.getStyle().set("text-shadow", "#000 6px 0 15px");
         vl.add(t1);
         vl.add(t2);
         vl.add(new Hr());
@@ -84,8 +84,10 @@ public class Grupo3View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Calculadora Índice de Masa Corporal (IMC)";
-        descripcion = " El Índice de Masa Corporal (IMC) es la cifra que te ayuda a averiguar si tu peso corporal es el adecuado o no.\r\n" + //
-                "Esta calculadora es una herramienta útil para averiguar rápidamente si tu peso corporal está situado, por ejemplo, en la zona de sobrepeso, pero hay que tener en cuenta que este índice no contempla las diferentes densidades de la masa muscular, grasa corporal o la masa ósea. En el caso de los deportistas que tienen una masa muscular muy desarrollada, el resultado de este cálculo podría indicar erróneamente que  padece sobrepeso. También hay que tener cuidado en los resultados obtenidos en personas embarazadas o en edad avanzada, ya que se tratan de casos especiales y en todo caso habría que tener en cuenta otros parámetros para determinar su IMC:\r\n" + //
+        descripcion = " El Índice de Masa Corporal (IMC) es la cifra que te ayuda a averiguar si tu peso corporal es el adecuado o no.\r\n"
+                + //
+                "Esta calculadora es una herramienta útil para averiguar rápidamente si tu peso corporal está situado, por ejemplo, en la zona de sobrepeso, pero hay que tener en cuenta que este índice no contempla las diferentes densidades de la masa muscular, grasa corporal o la masa ósea. En el caso de los deportistas que tienen una masa muscular muy desarrollada, el resultado de este cálculo podría indicar erróneamente que  padece sobrepeso. También hay que tener cuidado en los resultados obtenidos en personas embarazadas o en edad avanzada, ya que se tratan de casos especiales y en todo caso habría que tener en cuenta otros parámetros para determinar su IMC:\r\n"
+                + //
                 " ";
         gist = " <script src=\"https://gist.github.com/JuanGarciaRodas/8a2a9370c109e6607856398500e08398.js\"></script> ";
         replit = "https://replit.com/@Juan-Carlos1328/IMC";
@@ -107,7 +109,8 @@ public class Grupo3View extends VerticalLayout {
         // Algoritmo3
         titulo1 = "Algoritmo 3";
         titulo2 = "Calculador de Velocidad";
-        descripcion = "Es un ejercicio en el que se calcula la velocidad de un deportista en Km/h dado su tiempo en carrera y la distancia recorrida" + //
+        descripcion = "Es un ejercicio en el que se calcula la velocidad de un deportista en Km/h dado su tiempo en carrera y la distancia recorrida"
+                + //
                 "";
         gist = "<script src=\"https://gist.github.com/xeduark/3b1d5487b91f1fd5a6b0fc40eac44585.js\"></script>";
         replit = "https://replit.com/@EdwardMunoz/eje3#Main.java";
@@ -214,13 +217,15 @@ public class Grupo3View extends VerticalLayout {
                 }
             }
             partido--;
-            String m2 = ("Se jugaron " + partido + " partidos :"+" "+"El " + Equipo1.getValue() + " consiguió " + puntajeUno + " puntos, "+" "+ "El " + Equipo2.getValue() + " consiguió " + puntajeDos + " puntos");
-           
+            String m2 = ("Se jugaron " + partido + " partidos :" + " " + "El " + Equipo1.getValue() + " consiguió "
+                    + puntajeUno + " puntos, " + " " + "El " + Equipo2.getValue() + " consiguió " + puntajeDos
+                    + " puntos");
+
             if (puntajeUno > puntajeDos) {
-                m2+= " Felicitaciones, su equipo ganó!!";
+                m2 += " Felicitaciones, su equipo ganó!!";
                 // System.out.print(" Felicitaciones, su equipo ganó");
             } else {
-                m2+= " Lo sentimos, su equipo no ganó...";
+                m2 += " Lo sentimos, su equipo no ganó...";
                 // System.out.print(" Lo sentimos, su equipo no ganó");
             }
             m1.setText(m2);
@@ -235,7 +240,9 @@ public class Grupo3View extends VerticalLayout {
         hl.add(vl2);
         return hl;
     }
+
     double dis, min, seg, cen, tse, vms, vkh;
+
     public HorizontalLayout algoritmo3() {
 
         VerticalLayout vl1 = new VerticalLayout();
@@ -244,37 +251,37 @@ public class Grupo3View extends VerticalLayout {
                 "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fcorredor-pista-atletismo-768x512-fotor-20231031102144.jpg?alt=media&token=ebf53579-464c-4e40-a598-e9ca2278b63a&_gl=1*pkb7i8*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5ODc2NDQ3Ni44LjEuMTY5ODc2NTcyOC40Ni4wLjA.",
                 ""));
 
-                VerticalLayout vl2 = new VerticalLayout();
-                vl2.setAlignItems(Alignment.CENTER);
-        
-                HorizontalLayout hl = new HorizontalLayout();
-                hl.setAlignItems(Alignment.CENTER);
-                hl.setWidthFull();
-        
-                NumberField dis = new NumberField("distancia (en metros):");
-                NumberField min = new NumberField("distancia recorrida en minutos:");
-                NumberField seg = new NumberField("distancia recorrida en segundos:");
-                NumberField cen = new NumberField("distancia recorrida en centésimas:");
-                Button calcular = new Button("Calcular");
-                H3 result = new H3("0");
-        
-                calcular.addClickListener(event -> {
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
 
-                    vkh=((dis.getValue()/((min.getValue()*60)+seg.getValue()+(cen.getValue()/100)))*3600)/1000;
-                    result.setText(String.valueOf("La velocidad es de: "+vkh+" km/h"));
-                });
-        
-                vl2.add(new H3("Eres rapido? vamos a averiguarlo..."));
-                vl2.add(dis);
-                vl2.add(min);
-                vl2.add(seg);
-                vl2.add(cen);
-                vl2.add(calcular);
-        
-                vl2.add(result);
-                hl.add(vl1);
-                hl.add(vl2);
-                return hl;
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.setAlignItems(Alignment.CENTER);
+        hl.setWidthFull();
+
+        NumberField dis = new NumberField("distancia (en metros):");
+        NumberField min = new NumberField("distancia recorrida en minutos:");
+        NumberField seg = new NumberField("distancia recorrida en segundos:");
+        NumberField cen = new NumberField("distancia recorrida en centésimas:");
+        Button calcular = new Button("Calcular");
+        H3 result = new H3("0");
+
+        calcular.addClickListener(event -> {
+
+            vkh = ((dis.getValue() / ((min.getValue() * 60) + seg.getValue() + (cen.getValue() / 100))) * 3600) / 1000;
+            result.setText(String.valueOf("La velocidad es de: " + vkh + " km/h"));
+        });
+
+        vl2.add(new H3("Eres rapido? vamos a averiguarlo..."));
+        vl2.add(dis);
+        vl2.add(min);
+        vl2.add(seg);
+        vl2.add(cen);
+        vl2.add(calcular);
+
+        vl2.add(result);
+        hl.add(vl1);
+        hl.add(vl2);
+        return hl;
     }
 
 }

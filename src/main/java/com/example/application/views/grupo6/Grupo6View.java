@@ -41,7 +41,7 @@ public class Grupo6View extends VerticalLayout {
                 "url(https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)");
 
         H1 t1 = new H1("Grupo 3");
-        H2 t2 = new H2("Algoritmos Deportes y Salud");
+        H2 t2 = new H2("Algoritmos Ciencias");
         t1.getStyle().set("color", "white");
         t2.getStyle().set("color", "white");
         t1.getStyle().set("text-shadow", "#000 3px 0 15px");
@@ -60,7 +60,8 @@ public class Grupo6View extends VerticalLayout {
                 "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Ffoto%20johnny-fotor-20230928205637.png?alt=media&token=c50fc972-8526-4f39-a5c6-f338afef7052&_gl=1*1u0x7po*_ga*Njc3MDY0MDYzLjE2OTYzODAyMzQ.*_ga_CW55HF8NVT*MTY5NjM4MDIzNC4xLjEuMTY5NjM4MzQ0Mi42MC4wLjA.");
         est1.put("name", "Johnny Londoño");
         Map<String, String> est2 = new HashMap<>();
-        est2.put("image", "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FGranda%20Zea%20Jer%C3%B3nimo.png?alt=media&token=8abc8bd5-580e-4e69-b274-cafce57adf52&_gl=1*11ebyvb*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NjQzMjM2Mi4yLjEuMTY5NjQzNTQ0MC40OC4wLjA.");
+        est2.put("image",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2FGranda%20Zea%20Jer%C3%B3nimo.png?alt=media&token=8abc8bd5-580e-4e69-b274-cafce57adf52&_gl=1*11ebyvb*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NjQzMjM2Mi4yLjEuMTY5NjQzNTQ0MC40OC4wLjA.");
         est2.put("name", "Jeronimo Granda");
 
         users.add(est1);
@@ -85,10 +86,11 @@ public class Grupo6View extends VerticalLayout {
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
     }
-    
+
     double tiempo;
+
     public HorizontalLayout algoritmo1() {
-        
+
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
         vl1.add(new Image("https://pensaryaprender.files.wordpress.com/2011/10/fc3b3rmula-mru.gif", ""));
