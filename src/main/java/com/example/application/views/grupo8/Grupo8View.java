@@ -107,7 +107,7 @@ public class Grupo8View extends VerticalLayout {
         gist = "<script src=\"https://gist.github.com/8beea1c9f1e29259368036376541ae14.git\"></script>";
         replit = "https://replit.com/@Juan-CamiloC835/casoIntegrador3#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/digrama%20de%20flujo%20caso%20integrador%203.png?alt=media&token=99888dfe-b7a0-4e80-9e89-f7ccbf6e7086";
-        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo3(), gist, replit, diagrama));
 
     }
 
@@ -282,6 +282,70 @@ public class Grupo8View extends VerticalLayout {
         double capacidad = input5.getValue();
         double consumo = input6.getValue();
         resultado2.setText(String.valueOf(capacidad * consumo));
+    }
+
+    int velocidadMaximaPrimera = 15;
+    int velocidadMaximaSegunda = 30;
+    int velocidadMaximaTercera = 50;
+    int velocidadMaximaCuarta = 80;
+    int velocidadMaximaQuinta = 120;
+    String marchaActual;
+    int rpmMxm = 6500;
+
+    public HorizontalLayout algoritmo3() {
+
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image(
+                "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/calculos%20mecancicos%20(1).jpg?alt=media&token=c8d65b86-bf8c-4d30-a771-2b6f2c570750",
+                ""));
+
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
+
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.setAlignItems(Alignment.CENTER);
+        hl.setWidthFull();
+
+        H3 mensaje1 = new H3("");
+
+        NumberField velocidadActual = new NumberField("Velocidad km/h");
+        NumberField rpmMotor = new NumberField("RPM");
+
+        // calcularConsumo
+        Button btnCalcular = new Button("Calcular");
+        btnCalcular.addClickListener(event -> {
+            // Determinar la marcha adecuada
+            if (velocidadActual.getValue().doubleValue() <= velocidadMaximaPrimera
+                    && rpmMotor.getValue().doubleValue() <= rpmMxm) {
+                marchaActual = "Primera";
+            } else if (velocidadActual.getValue().doubleValue() <= velocidadMaximaSegunda
+                    && rpmMotor.getValue().doubleValue() <= rpmMxm) {
+                marchaActual = "Segunda";
+            } else if (velocidadActual.getValue().doubleValue() <= velocidadMaximaTercera
+                    && rpmMotor.getValue().doubleValue() <= rpmMxm) {
+                marchaActual = "Tercera";
+            } else if (velocidadActual.getValue().doubleValue() <= velocidadMaximaCuarta
+                    && rpmMotor.getValue().doubleValue() <= rpmMxm) {
+                marchaActual = "cuarta";
+            } else if (velocidadActual.getValue().doubleValue() <= velocidadMaximaQuinta
+                    && rpmMotor.getValue().doubleValue() <= rpmMxm) {
+                marchaActual = "Quinta";
+            } else {
+                marchaActual = "Neutra";
+            }
+            mensaje1.setText("El cambio en el que se sugiere debe ir su moto es: " + marchaActual);
+
+        });
+
+        vl2.add(velocidadActual);
+        vl2.add(rpmMotor);
+        vl2.add(btnCalcular);
+        vl2.add(mensaje1);
+
+        hl.add(vl1);
+        hl.add(vl2);
+        return hl;
     }
 
 }
