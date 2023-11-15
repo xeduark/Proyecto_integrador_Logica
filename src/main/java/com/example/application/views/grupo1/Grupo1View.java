@@ -155,6 +155,7 @@ public class Grupo1View extends VerticalLayout {
         int modo = 0;
         int cantidadNumeros = 0;
         int capturaDatos = 0;
+        double[] numeros;
 
         public HorizontalLayout algoritmo2() {
 
@@ -219,7 +220,7 @@ public class Grupo1View extends VerticalLayout {
                         if (modo == 0) {
                                 if (valor1.getValue() != null && valor2.getValue() != null) {
                                         double temp = calcularAreaTriangulo(valor1.getValue().doubleValue(),
-                                                        valor1.getValue().doubleValue());
+                                                        valor2.getValue().doubleValue());
                                         mensaje2.setText(String.valueOf(temp));
                                         valor1.setValue(null);
                                         valor2.setValue(null);
@@ -229,8 +230,23 @@ public class Grupo1View extends VerticalLayout {
                                 if (valor1.getValue() != null && (int) valor1.getValue().doubleValue() > 0) {
                                         if (capturaDatos == 0) {
                                                 cantidadNumeros = (int) valor1.getValue().doubleValue();
+                                                numeros = new double[cantidadNumeros];
+                                                capturaDatos++;
+                                                valor1.setLabel("Ingrese 1");
+                                                valor1.setValue(null);
                                         } else {
-
+                                                if (capturaDatos < cantidadNumeros) {
+                                                        numeros[capturaDatos - 1] = valor1.getValue().doubleValue();
+                                                        valor1.setLabel("Ingrese " + String.valueOf(capturaDatos + 1));
+                                                        capturaDatos++;
+                                                } else {
+                                                        double[] estadisticas = calcularEstadisticas(numeros);
+                                                        String temp = "La media de los números es: "
+                                                                        + String.valueOf(estadisticas[0])
+                                                                        + " La desviación estándar de los números es: "
+                                                                        + String.valueOf(estadisticas[1]);
+                                                        mensaje2.setText(temp);
+                                                }
                                         }
 
                                 }
@@ -252,6 +268,23 @@ public class Grupo1View extends VerticalLayout {
 
         public double calcularAreaTriangulo(double base, double altura) {
                 return 0.5 * base * altura;
+        }
+
+        public double[] calcularEstadisticas(double[] datos) {
+                double[] estadisticas = new double[2];
+                double suma = 0;
+                for (double dato : datos) {
+                        suma += dato;
+                }
+                double media = suma / datos.length;
+                double sumaDiferencias = 0;
+                for (double dato : datos) {
+                        sumaDiferencias += Math.pow(dato - media, 2);
+                }
+                double desviacionEstandar = Math.sqrt(sumaDiferencias / (datos.length - 1));
+                estadisticas[0] = media;
+                estadisticas[1] = desviacionEstandar;
+                return estadisticas;
         }
 
 }
