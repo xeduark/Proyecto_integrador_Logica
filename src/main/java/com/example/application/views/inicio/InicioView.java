@@ -60,7 +60,7 @@ public class InicioView extends VerticalLayout {
         VerticalLayout vl = new VerticalLayout();
         vl.setAlignItems(Alignment.CENTER);
         vl.setWidthFull();
-        IFrame iFrame = new IFrame("https://www.youtube.com/watch?v=7vaH1IV6Wq4");
+        IFrame iFrame = new IFrame("https://www.youtube.com/embed/7vaH1IV6Wq4");
         iFrame.setHeight("315px");
         iFrame.setWidth("560px");
         iFrame.setAllow("accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");

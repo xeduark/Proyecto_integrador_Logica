@@ -99,14 +99,14 @@ public class Grupo2View extends VerticalLayout {
                 diagrama = "https://app.code2flow.com/pHtSYu.svg";
                 add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
-                // Algoritmo2
-                titulo1 = "Algoritmo2";
-                titulo2 = " Calculadora CDT";
-                descripcion = "Este programa es una calculadora de certificados de depósito a término (CDT), la cual recopila información del usuario, monto a invertir, tasa de interés anual, y el plazo en meses, para luego calcular y mostrar el valor futuro.";
-                gist = " <script src=\"https://gist.github.com/Rossember01/a2704892a567929d16966b76701ac444.js\"></script>";
-                replit = "https://replit.com/@rossember01/CalculadoraCDT-1#Main.java";
-                diagrama = "https://app.code2flow.com/0THc66HxurxT.png";
-                add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+                // // Algoritmo2
+                // titulo1 = "Algoritmo2";
+                // titulo2 = " Calculadora CDT";
+                // descripcion = "Este programa es una calculadora de certificados de depósito a término (CDT), la cual recopila información del usuario, monto a invertir, tasa de interés anual, y el plazo en meses, para luego calcular y mostrar el valor futuro.";
+                // gist = " <script src=\"https://gist.github.com/Rossember01/a2704892a567929d16966b76701ac444.js\"></script>";
+                // replit = "https://replit.com/@rossember01/CalculadoraCDT-1#Main.java";
+                // diagrama = "https://app.code2flow.com/0THc66HxurxT.png";
+                // add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
 
                 // Algoritmo3
                 titulo1 = "Algoritmo3";
@@ -171,134 +171,5 @@ public class Grupo2View extends VerticalLayout {
                 }
                 return saldo;
         }
-
-         public HorizontalLayout algoritmo2() {
-
-                VerticalLayout vl1 = new VerticalLayout();
-                vl1.setAlignItems(Alignment.CENTER);
-                vl1.add(new Image(
-                                "https://firebasestorage.googleapis.com/v0/b/rossember-3af5f.appspot.com/o/CDT%20(1).jpg?alt=media&token=efcb92d5-7fa7-46e9-9cfb-4769d26039db",
-                                ""));
-
-                VerticalLayout vl2 = new VerticalLayout();
-                vl2.setAlignItems(Alignment.CENTER);
-
-                HorizontalLayout hl = new HorizontalLayout();
-                hl.setAlignItems(Alignment.CENTER);
-                hl.setWidthFull();
-
-                 DoubleField cantidadDineroField = new DoubleField("Cantidad de dinero solicitado");
-    DoubleField tasaInteresAnualField = new DoubleField("Tasa de interés anual (%)");
-    IntegerField plazoMesesField = new IntegerField("Plazo en meses");
-    Button calcularButton = new Button("Calcular");
-    DecimalFormat decimalFormat = new DecimalFormat("#,########");
-
-    public SimuladorCreditoView() {
-        FormLayout formLayout = new FormLayout();
-        formLayout.add(cantidadDineroField, tasaInteresAnualField, plazoMesesField, calcularButton);
-
-        calcularButton.addClickListener(event -> calcularCredito());
-
-        add(new H3("Simulador de crédito de libre inversión"), formLayout);
-    }
-
-    private void calcularCredito() {
-        double cantidadDinero = cantidadDineroField.getValue();
-        double tasaInteresAnual = tasaInteresAnualField.getValue();
-        int plazoMeses = plazoMesesField.getValue();
-
-        double tasaInteresMensual = (tasaInteresAnual / 12) / 100;
-        double[] cuotasMensuales = calcularCuotasMensuales(cantidadDinero, tasaInteresMensual, plazoMeses);
-        double costoTotalCredito = cuotasMensuales[plazoMeses - 1] * plazoMeses;
-
-        
-        Notification.show(createResumenCredito(cantidadDinero, tasaInteresAnual, plazoMeses, cuotasMensuales[0], costoTotalCredito));
-    }
-
-    private String createResumenCredito(double cantidadDinero, double tasaInteresAnual, int plazoMeses, double cuotaMensual, double costoTotalCredito) {
-        return "Resumen del crédito:\n" +
-                "Cantidad de dinero: $" + decimalFormat.format(cantidadDinero) + "\n" +
-                "Tasa de interés anual: " + tasaInteresAnual + "%\n" +
-                "Plazo en meses: " + plazoMeses + " meses\n" +
-                "Cuota mensual: $" + decimalFormat.format(cuotaMensual) + "\n" +
-                "Costo total del crédito: $" + decimalFormat.format(costoTotalCredito);
-    }
-
-    public static double[] calcularCuotasMensuales(double cantidadDinero, double tasaInteresMensual, int plazoMeses) {
-        double[] cuotasMensuales = new double[plazoMeses];
-
-        for (int i = 0; i < plazoMeses; i++) {
-            cuotasMensuales[i] = cantidadDinero * (tasaInteresMensual * Math.pow(1 + tasaInteresMensual, i + 1))
-                    / (Math.pow(1 + tasaInteresMensual, i + 1) - 1);
-        }
-
-        return cuotasMensuales;
-    }
-
-        
-
-  }
-  public HorizontalLayout algoritmo3() {
-
-                VerticalLayout vl1 = new VerticalLayout();
-                vl1.setAlignItems(Alignment.CENTER);
-                vl1.add(new Image(
-                                "https://firebasestorage.googleapis.com/v0/b/rossember-3af5f.appspot.com/o/credito.jpg?alt=media&token=a0920f60-b14e-4b2e-9932-01e27c841624",
-                                ""));
-
-                VerticalLayout vl2 = new VerticalLayout();
-                vl2.setAlignItems(Alignment.CENTER);
-
-                HorizontalLayout hl = new HorizontalLayout();
-                hl.setAlignItems(Alignment.CENTER);
-                hl.setWidthFull();
-  DoubleField cantidadDineroField = new DoubleField("Cantidad de dinero solicitado");
-  DoubleField tasaInteresAnualField = new DoubleField("Tasa de interés anual (%)");
-  IntegerField plazoMesesField = new IntegerField("Plazo en meses");
-  Button calcularButton = new Button("Calcular");
-  DecimalFormat decimalFormat = new DecimalFormat("#,########");
-
-  public SimuladorCreditoView() {
-      FormLayout formLayout = new FormLayout();
-      formLayout.add(cantidadDineroField, tasaInteresAnualField, plazoMesesField, calcularButton);
-
-      calcularButton.addClickListener(event -> calcularCredito());
-
-      add(new H3("Simulador de crédito de libre inversión"), formLayout);
-  }
-
-  private void calcularCredito() {
-      double cantidadDinero = cantidadDineroField.getValue();
-      double tasaInteresAnual = tasaInteresAnualField.getValue();
-      int plazoMeses = plazoMesesField.getValue();
-
-      double tasaInteresMensual = (tasaInteresAnual / 12) / 100;
-      double[] cuotasMensuales = calcularCuotasMensuales(cantidadDinero, tasaInteresMensual, plazoMeses);
-      double costoTotalCredito = cuotasMensuales[plazoMeses - 1] * plazoMeses;
-
-              Notification.show(createResumenCredito(cantidadDinero, tasaInteresAnual, plazoMeses, cuotasMensuales[0], costoTotalCredito));
-  }
-
-  private String createResumenCredito(double cantidadDinero, double tasaInteresAnual, int plazoMeses, double cuotaMensual, double costoTotalCredito) {
-      return "Resumen del crédito:\n" +
-              "Cantidad de dinero: $" + decimalFormat.format(cantidadDinero) + "\n" +
-              "Tasa de interés anual: " + tasaInteresAnual + "%\n" +
-              "Plazo en meses: " + plazoMeses + " meses\n" +
-              "Cuota mensual: $" + decimalFormat.format(cuotaMensual) + "\n" +
-              "Costo total del crédito: $" + decimalFormat.format(costoTotalCredito);
-  }
-
-  public static double[] calcularCuotasMensuales(double cantidadDinero, double tasaInteresMensual, int plazoMeses) {
-      double[] cuotasMensuales = new double[plazoMeses];
-
-      for (int i = 0; i < plazoMeses; i++) {
-          cuotasMensuales[i] = cantidadDinero * (tasaInteresMensual * Math.pow(1 + tasaInteresMensual, i + 1))
-                  / (Math.pow(1 + tasaInteresMensual, i + 1) - 1);
-      }
-
-      return cuotasMensuales;
-  }
-}
-
 
 }
