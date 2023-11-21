@@ -42,7 +42,7 @@ public class Grupo5View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80)");
+                "url(https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fhotel-fotor-2023112118409.jpg?alt=media&token=c8f12cb7-c66c-47f6-ac10-a5c3ad4ac7fc)");
 
         H1 t1 = new H1("Grupo 5");
         H2 t2 = new H2("Algoritmos Hotelería y Turismo");
