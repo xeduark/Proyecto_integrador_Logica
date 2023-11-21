@@ -83,7 +83,7 @@ public class Grupo5View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Reservación Mesas Restaurante";
-        descripcion = "P.";
+        descripcion = "Programa que le permite crear al usuario un sistema con una cantidad de mesas definidas cuándo se inicia el programa, y luego muestra un menú para mostrar las mesas y reservar las mesas o salir del programa.";
         gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
         replit = "https://replit.com/@gustavo-adolf89/Reservacionmesasrestaurante#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/foto-7af27.appspot.com/o/reserva%20restaurante.png?alt=media&token=9acfbebe-0e12-46f9-94bd-2bbc7fee5379";
