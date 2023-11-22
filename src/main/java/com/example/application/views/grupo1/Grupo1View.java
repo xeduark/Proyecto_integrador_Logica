@@ -40,7 +40,7 @@ public class Grupo1View extends VerticalLayout {
                 vl.getStyle().set("background-repeat", "no-repeat");
                 vl.getStyle().set("background-size", "cover");
                 vl.getStyle().set("background",
-                                "url(https://plus.unsplash.com/premium_photo-1661763720453-038215ddc44f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1801&q=80)");
+                                "url(https://firebasestorage.googleapis.com/v0/b/proyectoint-4cf64.appspot.com/o/WhatsApp%20Image%202023-10-10%20at%207.01.13%20PM.jpeg?alt=media&token=df390de5-860d-4b38-9f22-384ad15d71a9&_gl=1*32z3yj*_ga*MTUzNDM3NTE0OS4xNjk3MTU4MDEz*_ga_CW55HF8NVT*MTY5NzE1ODAxMy4xLjEuMTY5NzE1ODIxNy42MC4wLjA)");
 
                 H1 t1 = new H1("Grupo 1");
                 H2 t2 = new H2("Geometría y Estadística");

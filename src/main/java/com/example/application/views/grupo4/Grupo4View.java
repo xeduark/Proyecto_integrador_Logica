@@ -64,13 +64,12 @@ public class Grupo4View extends VerticalLayout {
         est1.put("name", "Danny Idarraga");
         Map<String, String> est2 = new HashMap<>();
         est2.put("image",
-                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2FFotos%2Fperro-fotor-20231010204928.png?alt=media&token=0d57c7d5-571c-4c65-9788-92b01c840254&_gl=1*1q2van9*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0MjI4MS41MC4wLjA.");
+                "https://firebasestorage.googleapis.com/v0/b/cesde-7fe22.appspot.com/o/javier2.png?alt=media&token=32fa3c1c-9733-4798-8466-a8eb8124c32d");
         est2.put("name", "Javier Boyacá");
-        
 
         users.add(est1);
         users.add(est2);
-        
+
         add(secciones.students(users));
 
         String titulo1;
@@ -82,14 +81,13 @@ public class Grupo4View extends VerticalLayout {
 
         // Algoritmo1
         titulo1 = "Algoritmo 1";
-        titulo2 = "JUEGO DE ADIVINANZA DE CODIGO DE COLORES DE LAS RESISTENCIAS";
-        descripcion = "Programa para practicar el uso del código de colores en electrónica";
-        gist = "gist  <script src=\"https://gist.github.com/dannyedison/bbde62865931f27ddf5e84be9bc1404b.js\"></script>\r\n"
-                + //
-                "";
-        replit = "https://replit.com/@dannyedison75/Codigo1#Main.java";
-        diagrama = "https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/MainCodigo1.png?alt=media&token=6f23b8ed-74e5-44ee-9a7e-c13330cd97f5&_gl=1*dk1x5q*_ga*MTgzMzU1OTEwNi4xNjk0NzMwNzcx*_ga_CW55HF8NVT*MTY5Nzk4MDYwMC4yNC4xLjE2OTc5ODIzMzYuNTIuMC4w";
+        titulo2 = "Calculadora Resistencias Eléctricas";
+        descripcion = "Ésta aplicación nos permite conocer los colores y sus valores equivalentes segúnn la posición de la banda correspondiente";
+        gist = "<script src=\"https://gist.github.com/dannyedison/f0af0eedd84600bc15a13427d17e1880.js\"></script>";
+        replit = "https://replit.com/@dannyedison75/Codigo2";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/imagenes-d40f0.appspot.com/o/Cod2%20Diagrama.png?alt=media&token=7f9da911-ea43-4b13-8977-11559b34377c";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
+
         // Algoritmo2
         titulo1 = "Algoritmo 2";
         titulo2 = "JUEGO DE ADIVINANZA DE CODIGO DE COLORES DE LAS RESISTENCIAS";
