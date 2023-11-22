@@ -162,7 +162,7 @@ public class Grupo1View extends VerticalLayout {
                 VerticalLayout vl1 = new VerticalLayout();
                 vl1.setAlignItems(Alignment.CENTER);
                 vl1.add(new Image(
-                                "https://firebasestorage.googleapis.com/v0/b/pi-equipo-1.appspot.com/o/41a1bf22-4bed-4d9b-8eef-c1417746ef65.jfif?alt=media&token=4897e9e3-6150-444f-907a-18cd6c374f97&_gl=1*1gas3p4*_ga*Mzk3NDA0NzI5LjE2OTY5ODUxNTI.*_ga_CW55HF8NVT*MTY5Njk4NTE1Mi4xLjEuMTY5Njk4NTQyNy42LjAuMA..",
+                                "https://firebasestorage.googleapis.com/v0/b/proyectos-mr.appspot.com/o/algoritmo2-.png?alt=media&token=d627dc32-7c31-47f8-a90d-bf3c3cc7bf37",
                                 ""));
                 VerticalLayout vl2 = new VerticalLayout();
                 vl2.setAlignItems(Alignment.CENTER);
