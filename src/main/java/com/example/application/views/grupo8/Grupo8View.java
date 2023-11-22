@@ -41,10 +41,10 @@ public class Grupo8View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZAV-Aniv4BYuyHctlK_Ec0iFykayMWgcuEG2zCmN8p87O8VUnGwWgvVG9NGvTZmJvxJQ&usqp=CAU)");
+                "url(https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fmecanica-fotor-20231121191328.jpg?alt=media&token=da116d93-9aa9-4a76-b8a7-11114ed0d025)");
 
         H1 t1 = new H1("Grupo 8");
-        H2 t2 = new H2("Algoritmos Deportes y Salud");
+        H2 t2 = new H2("Algoritmos Mecánica General");
         t1.getStyle().set("color", "white");
         t2.getStyle().set("color", "white");
         t1.getStyle().set("text-shadow", "#000 3px 0 15px");
@@ -87,8 +87,8 @@ public class Grupo8View extends VerticalLayout {
         // Algoritmo1
         titulo1 = "Algoritmo 1";
         titulo2 = "Calculos Mecanicos";
-        descripcion = ": :Este ejercicio tiene como objetivo simular la caída libre de un objeto desde una altura inicial determinada bajo la influencia de la gravedad. La idea es calcular y mostrar varios aspectos del movimiento del objeto, incluyendo el tiempo que tarda en caer y la velocidad con la que impacta en el suelo";
-        gist = "<script src=\"https://gist.github.com/2eaa2291771e2ad053b258597f1681bb.git\"></script>";
+        descripcion = "Este ejercicio tiene como objetivo simular la caída libre de un objeto desde una altura inicial determinada bajo la influencia de la gravedad. La idea es calcular y mostrar varios aspectos del movimiento del objeto, incluyendo el tiempo que tarda en caer y la velocidad con la que impacta en el suelo";
+        gist = "<script src=\"https://gist.github.com/fed15f439e35bb6ce14e779cddae63ff.git\"></script>";
         replit = "https://replit.com/@Juan-CamiloC835/casoIntegrador2#Main.java";
         diagrama = "https://firebasestorage.googleapis.com/v0/b/proyecto-integrador-5260a.appspot.com/o/diagrama%20de%20flujo%20proyecto%20integrador1.png?alt=media&token=09d3cbdb-0c0b-41fd-bbc0-59efbdb591cc";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
