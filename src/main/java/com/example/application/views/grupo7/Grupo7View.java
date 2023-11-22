@@ -95,9 +95,9 @@ public class Grupo7View extends VerticalLayout {
                 + //
                 "\r\n" + //
                 "";
-        gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        replit = "";
-        diagrama = "";
+        gist = "<script src=\"https://gist.github.com/Jtanrm/50e86487ae95337fe957983112ede5d3.js\"></script>";
+        replit = "https://replit.com/@jhonvalencia3/eje1-1#Main.java";
+        diagrama = "https://app.code2flow.com/IZ6IohvfHUgr.svg";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
         // Algoritmo2

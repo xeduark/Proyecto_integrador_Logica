@@ -223,7 +223,7 @@ public class Grupo5View extends VerticalLayout {
 
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
-        vl1.add(new Image("https://static.tuasaude.com/media/article/me/dr/imc_15748_l.jpg", ""));
+        vl1.add(new Image("https://firebasestorage.googleapis.com/v0/b/evidencias1nivel.appspot.com/o/reservahotel3.jpg?alt=media&token=b3322c5f-efc2-4f9b-98b3-a3c3530fa165", ""));
 
         VerticalLayout vl2 = new VerticalLayout();
         vl2.setAlignItems(Alignment.CENTER);
