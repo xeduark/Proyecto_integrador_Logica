@@ -43,7 +43,7 @@ public class Grupo8View extends VerticalLayout {
         vl.getStyle().set("background-repeat", "no-repeat");
         vl.getStyle().set("background-size", "cover");
         vl.getStyle().set("background",
-                "url(https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2Fmecanica-fotor-20231121191328.jpg?alt=media&token=da116d93-9aa9-4a76-b8a7-11114ed0d025)");
+                "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZAV-Aniv4BYuyHctlK_Ec0iFykayMWgcuEG2zCmN8p87O8VUnGwWgvVG9NGvTZmJvxJQ&usqp=CAU)");
 
         H1 t1 = new H1("Grupo 8");
         H2 t2 = new H2("Algoritmos Mecánica General");
