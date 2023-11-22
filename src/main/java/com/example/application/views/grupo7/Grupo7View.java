@@ -137,7 +137,7 @@ public class Grupo7View extends VerticalLayout {
         VerticalLayout vl1 = new VerticalLayout();
         vl1.setAlignItems(Alignment.CENTER);
         vl1.add(new Image(
-                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2F818eab1d9e1963313a2e2710ae84daf9-fotor-20231010195945-fotor-20231010205323.jpg?alt=media&token=e5b2f6f9-0e16-4544-90fc-daa1eab6f1d6&_gl=1*1pmg29g*_ga*MTAyMjY3NzI1MC4xNjk1MTU5NTY0*_ga_CW55HF8NVT*MTY5NzA0MDkxOC4zLjEuMTY5NzA0NDg4MC42MC4wLjA.",
+                "https://firebasestorage.googleapis.com/v0/b/foto-perfil-67203.appspot.com/o/Proyecto_integrador_logica%2Ffotos%20de%20la%20descripcion%2FEl-Sistema-Solar-podria-expulsar-a-un-planeta-2-fotor-20231121185452.jpg?alt=media&token=8020ca35-9132-4c76-87af-04d611cd8dba",
                 ""));
 
         VerticalLayout vl2 = new VerticalLayout();
