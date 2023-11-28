@@ -7,6 +7,7 @@ import java.util.Map;
 import com.example.application.views.MainLayout;
 import com.example.application.views.Secciones;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
@@ -85,6 +86,15 @@ public class Grupo6View extends VerticalLayout {
         diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-alumno.appspot.com/o/diagramaf%20mru.svg?alt=media&token=5bc6511b-1361-46f3-a233-834631028b82";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
+        // Algoritmo2
+        titulo1 = "Algoritmo 2";
+        titulo2 = "Calculara de oro";
+        descripcion = "Este código en Java es para una aplicación que calcula el valor del oro basado en los kilates y el peso en gramos. ";
+        gist = "<script src=\"https://gist.github.com/johnnycesde/0bd947bfe0c5af0af8e6b851da0f3262.js\"></script>";
+        replit = "https://replit.com/@johnnylondono/CalculadoraOro2#Main.java";
+        diagrama = "https://firebasestorage.googleapis.com/v0/b/cesde-alumno.appspot.com/o/DiaGramcalculoro.svg?alt=media&token=bff807d7-ae98-4612-8fde-5f9f44a4145e";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+
     }
 
     double tiempo;
@@ -121,6 +131,63 @@ public class Grupo6View extends VerticalLayout {
         hl.add(vl1);
         hl.add(vl2);
         return hl;
+    }
+
+    ComboBox<String> comboBox1 = new ComboBox<>("Kilates");
+    public HorizontalLayout algoritmo2() {
+
+        VerticalLayout vl1 = new VerticalLayout();
+        vl1.setAlignItems(Alignment.CENTER);
+        vl1.add(new Image("https://forbescentroamerica.com/_next/image?url=https%3A%2F%2Fcdn.forbescentroamerica.com%2F2020%2F01%2Foro.jpg%3Fv%3D640360&w=828&q=75", ""));
+
+        VerticalLayout vl2 = new VerticalLayout();
+        vl2.setAlignItems(Alignment.CENTER);
+
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.setAlignItems(Alignment.CENTER);
+        hl.setWidthFull();
+        
+        comboBox1.setAllowCustomValue(true);
+        add(comboBox1);
+        comboBox1.setItems("18", "24");
+        
+        NumberField valor = new NumberField("Gramos de Oro");
+        Button calcular = new Button("Calcular ");
+        H3 result = new H3("0");
+
+        calcular.addClickListener(event -> {
+            int kilates = Integer.parseInt(comboBox1.getValue()) ; 
+            double gramos = valor.getValue().doubleValue();           
+            double precioPorGramo = obtenerPrecioPorGramo(kilates);
+            double valorTotal = calcularValorTotal(gramos, precioPorGramo);
+            result.setText("El valor del oro es: " +String.valueOf(valorTotal));
+        });
+
+        vl2.add(new H3("Calcular Valor Oro"));
+        vl2.add(comboBox1);
+        vl2.add(valor);
+        vl2.add(calcular);
+        vl2.add(result);
+        hl.add(vl1);
+        hl.add(vl2);
+        return hl;
+    }
+
+    private  double obtenerPrecioPorGramo(int kilates) {
+        double precioPorGramo;
+        // La lógica aquí podría ser más compleja, pero por simplicidad, usaremos
+        // valores fijos.
+        if (kilates == 18) {
+            precioPorGramo = 45; // Precio por gramo para 18 kilates
+        } else {
+            precioPorGramo = 60; // Precio por gramo para 24 kilates
+        }
+        return precioPorGramo;
+    }
+
+    // Función para calcular el valor total del oro
+    private  double calcularValorTotal(double gramos, double precioPorGramo) {
+        return gramos * precioPorGramo;
     }
 
 }
