@@ -3,6 +3,7 @@ package com.example.application.views.grupo7;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import com.example.application.views.MainLayout;
 import com.example.application.views.Secciones;
@@ -100,24 +101,24 @@ public class Grupo7View extends VerticalLayout {
         diagrama = "https://app.code2flow.com/IZ6IohvfHUgr.svg";
         add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo1(), gist, replit, diagrama));
 
-        // Algoritmo2
-        // titulo1 = "Algoritmo 2";
-        // titulo2 = "Consulta la distancia de los planetas del sistema solar a distancia en kilómetros desde la tierra";
-        // descripcion = "En este algoritmo podremos obtener la distancia entre la tierra y los planetas del sistema solar.\r\n"
-        //         + //
-        //         "\r\n" + //
-        //         "\r\n" + //
-        //         "La astronomía es una ciencia que estudia el universo y todos sus componentes. Estudia también los fenómenos que afectan a los cuerpos celestes, sus movimientos y comportamientos esperables.\r\n"
-        //         + //
-        //         "\r\n" + //
-        //         "Entre los cuerpos celestes se encuentran los planetas, estrellas, satélites, cometas, meteoroides, materia interestelar y materia oscura\r\n"
-        //         + //
-        //         "\r\n" + //
-        //         "";
-        // gist = "<script src=\"https://gist.github.com/jfinfocesde/e2da562bb64be1b54f461de2cd5c001d.js\"></script>";
-        // replit = "";
-        // diagrama = "";
-        // add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
+        Algoritmo2
+        titulo1 = "Algoritmo 2";
+        titulo2 = "Planetas Rocosos y Gaseosos";
+        descripcion = "Nuestro sistema solar está conformado por ocho planetas además de otros cuerpos que se encuentran orbitando alrededor del sol..\r\n"
+                + //
+                "\r\n" + //
+                "\r\n" + //
+                "Cuatro de estos planetas son rocosos (Mercurio, Venus, Tierra, Marte).\r\n"
+                + //
+                "\r\n" + //
+                "Cuatro son gaseosos y son los más retirados del sol (Júpiter, Saturno, Urano, Neptuno) todos los planetas están en orden.\r\n"
+                + //
+                "\r\n" + //
+                "";
+        gist = "<script src=\"https://gist.github.com/JulianGarcH/ee46f166205ee4dd7ae2f46d981dca62.js\"></script>";
+        replit = "https://replit.com/@jagarciaherr/Algoritmo2#Main.java";
+        diagrama = "https://app.code2flow.com/CPyhoM8FygjJ.svg ";
+        add(secciones.algoritmo(titulo1, titulo2, descripcion, algoritmo2(), gist, replit, diagrama));
 
     }
     
