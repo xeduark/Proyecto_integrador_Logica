@@ -147,9 +147,9 @@ public class Grupo7View extends VerticalLayout {
         hl.setAlignItems(Alignment.CENTER);
         hl.setWidthFull();
 
-        H3 mensaje1 = new H3("");
+        H3 mensaje1 = new H3("Escoge un planeta y conoce cuál es la distancia entre el y la tierra");
 
-        ComboBox<String> comboBox1 = new ComboBox<>("Escoge un planeta y conoce cuál es la distancia entre el y la tierra");
+        ComboBox<String> comboBox1 = new ComboBox<>("Escoge un planeta:");
         comboBox1.setAllowCustomValue(true);
         add(comboBox1);
         comboBox1.setItems("Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno");
